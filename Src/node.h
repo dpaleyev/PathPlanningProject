@@ -12,4 +12,8 @@ struct Node
     Node    *parent; //backpointer to the predecessor node (e.g. the node which g-value was used to set the g-velue of the current node)
 
 };
+
+bool compareNodes (const Node* a, const Node* b) {
+    return a->g < b->g;
+}
 #endif

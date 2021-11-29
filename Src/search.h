@@ -8,6 +8,8 @@
 #include <math.h>
 #include <limits>
 #include <chrono>
+#include <set>
+#include <utility>
 
 class Search
 {
@@ -15,6 +17,7 @@ class Search
         Search();
         ~Search(void);
         SearchResult startSearch(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
+        std::vector<std::pair<int, int>> getSucessors(const Map &map, int i, int j);
 
     protected:
         //CODE HERE
@@ -32,7 +35,7 @@ class Search
         //Start with very simple (and ineffective) structures like list or vector and make it work first
         //and only then begin enhancement!
 
-
+        std::set<Node*, decltype(&compareNodes)> OPEN, CLOSED;
         SearchResult                    sresult; //This will store the search result
         std::list<Node>                 lppath, hppath; //
 

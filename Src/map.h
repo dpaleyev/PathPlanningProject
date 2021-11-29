@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <utility>
 #include "tinyxml2.h"
 
 //That's the class that stores BOTH grid map data AND start-goal locations.
@@ -39,6 +40,8 @@ class Map
         int getMapHeight() const;
         int getMapWidth() const;
         double getCellSize() const;
+        std::pair<int, int> getStart() const;
+        std::pair<int, int> getGoal() const;
 
 };
 
