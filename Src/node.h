@@ -13,7 +13,4 @@ struct Node
 
 };
 
-bool compareNodes (const Node* a, const Node* b) {
-    return a->g < b->g;
-}
 #endif

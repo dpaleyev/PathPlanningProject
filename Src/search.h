@@ -9,7 +9,20 @@
 #include <limits>
 #include <chrono>
 #include <set>
+#include <unordered_map>
 #include <utility>
+
+struct Comparator {
+    bool operator() (const Node* a, const Node* b) const {
+        return a->g < b->g;
+    }
+};
+
+struct PairHash {
+    std::size_t operator()(const std::pair<int, int> &x) const {
+        return std::hash<int>()(x.first) ^ std::hash<int>()(x.second);
+    }
+};
 
 class Search
 {
@@ -35,10 +48,13 @@ class Search
         //Start with very simple (and ineffective) structures like list or vector and make it work first
         //and only then begin enhancement!
 
-        std::set<Node*, decltype(&compareNodes)> OPEN, CLOSED;
+        std::set<Node*, Comparator> OPEN_order;
+        std::unordered_map<std::pair<int, int>, Node*, PairHash> CLOSED, OPEN_find;
         SearchResult                    sresult; //This will store the search result
         std::list<Node>                 lppath, hppath; //
 
         //CODE HERE to define other members of the class
+        void makePrimaryPath(Node curNode);
+        void makeSecondaryPath();
 };
 #endif

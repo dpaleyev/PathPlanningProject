@@ -14,47 +14,46 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     auto start_time = std::chrono::system_clock::now();
     sresult.pathfound = false;
     auto [start_i, start_j] = map.getStart();
-    OPEN.insert(new Node {start_i, start_j, 0, 0, 0, nullptr});
+    Node* start = new Node {start_i, start_j, 0, 0, 0, nullptr};
+    OPEN_order.insert(start);
+    OPEN_find.insert({{start->i, start->j}, start});
 
-    while (!OPEN.empty()) {
-        Node* v = *OPEN.begin();
-        OPEN.erase(OPEN.begin());
-        CLOSED.insert(v);
-        for (Node* i: OPEN) {
-            if (i->g < v->g) {
-                v = i;
-            }
-        }
-        if (std::make_pair(v->i, v->j) == map.getGoal()) {
+    Node* head = nullptr;
+    while (!OPEN_order.empty()) {
+        Node* s = *OPEN_order.begin();
+        OPEN_order.erase(OPEN_order.begin());
+        OPEN_find.erase({s->i, s->j});
+        CLOSED.insert({{s->i, s->j}, s});
+        if (std::make_pair(s->i, s->j) == map.getGoal()) {
             sresult.pathfound = true;
+            head = s;
+            break;
         }
-        for (auto& sucessor : getSucessors(map, v->i, v->j)) {
-            Node* target = nullptr;
-            for (Node* i: CLOSED) {
-                if (i->i == sucessor.first && i->j == sucessor.second) {
-                    target = i;
-                }
-            }
-            if (!target) {
-                for (Node* i: OPEN) {
-                    if (i->i == sucessor.first && i->j == sucessor.second) {
-                        target = i;
-                    }
-                }
-                if (target) {
-                    if (target->g > v->g + map.getCellSize()) {
-                        target->g = v->g + map.getCellSize();
-                        target->parent = v;
-                    }
+        for (int d_i = -1; d_i <= 1; d_i++) {
+            for (int d_j = -1; d_j <= 1; d_j++) {
+                if (d_i == 0 && d_j == 0) {
                     continue;
+                }
+                double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO * map.getCellSize() : map.getCellSize();
+                if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
+                    CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
+                    Node *s_new = new Node{s->i + d_i, s->j + d_j, 0, s->g + d_dist, 0, s};
+                    OPEN_order.insert(s_new);
+                    OPEN_find.insert({{s_new->i, s_new->j}, start});
                 } else {
-                    OPEN.insert(new Node {sucessor.first, sucessor.second, 0, v->g + map.getCellSize(), 0, v});
+                    if (OPEN_find.find({s->i + d_i, s->j + d_j}) != OPEN_find.end()) {
+                        Node *s_new = OPEN_find[{s->i + d_i, s->j + d_j}];
+                        if (s->g + d_dist > s_new->g) {
+                            s_new->g = s->g + d_dist;
+                            s_new->parent = s;
+                        }
+                    }
                 }
             }
         }
     }
-
-    sresult.nodescreated = OPEN.size() + CLOSED.size();
+    //makePrimaryPath(*head);
+    sresult.nodescreated = OPEN_find.size() + CLOSED.size();
     sresult.numberofsteps = CLOSED.size();
     sresult.time = (std::chrono::system_clock::now() - start_time).count();
     sresult.hppath = &hppath; //Here is a constant pointer
@@ -62,22 +61,16 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     return sresult;
 }
 
-std::vector<std::pair<int, int>> Search::getSucessors(const Map &map, int i, int j) {
-    std::vector<std::pair<int, int>> res;
-    std::vector<int> delta_i = {-1, 0, 1, 0};
-    std::vector<int> delta_j = {0, -1, 0, 1};
-    for (int p = 0; p < 4; ++p) {
-        if (map.CellOnGrid(i + delta_i[p], j + delta_j[p]) && map.CellIsTraversable(i + delta_i[p], j + delta_j[p])) {
-            res.emplace_back(i + delta_i[p], j + delta_j[p]);
-        }
-    }
-    return res;
-}
 
-/*void Search::makePrimaryPath(Node curNode)
+
+void Search::makePrimaryPath(Node curNode)
 {
-    //need to implement
-}*/
+    hppath.push_back(curNode);
+    while (curNode.parent) {
+        curNode = *curNode.parent;
+        hppath.push_back(curNode);
+    }
+}
 
 /*void Search::makeSecondaryPath()
 {
