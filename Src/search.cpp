@@ -34,25 +34,39 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 if (d_i == 0 && d_j == 0) {
                     continue;
                 }
+                if (!map.CellOnGrid(s->i + d_i, s->j + d_j)) {
+                    continue;
+                }
+                if (map.CellIsObstacle(s->i + d_i, s->j + d_j)) {
+                    continue;
+                }
                 double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO * map.getCellSize() : map.getCellSize();
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
                     Node *s_new = new Node{s->i + d_i, s->j + d_j, 0, s->g + d_dist, 0, s};
                     OPEN_order.insert(s_new);
-                    OPEN_find.insert({{s_new->i, s_new->j}, start});
+                    OPEN_find.insert({{s_new->i, s_new->j}, s_new});
                 } else {
                     if (OPEN_find.find({s->i + d_i, s->j + d_j}) != OPEN_find.end()) {
                         Node *s_new = OPEN_find[{s->i + d_i, s->j + d_j}];
-                        if (s->g + d_dist > s_new->g) {
+                        if (s->g + d_dist < s_new->g) {
                             s_new->g = s->g + d_dist;
                             s_new->parent = s;
                         }
                     }
                 }
+                if (start->parent) {
+                    std::cout << start->parent << ' ' << start->parent->i << " " << start->parent->j << '\n';
+                }
             }
         }
     }
-    //makePrimaryPath(*head);
+    if (sresult.pathfound) {
+        sresult.pathlength = head->g;
+        makePrimaryPath(*head);
+        std::cerr << head->g << '\n';
+    }
+
     sresult.nodescreated = OPEN_find.size() + CLOSED.size();
     sresult.numberofsteps = CLOSED.size();
     sresult.time = (std::chrono::system_clock::now() - start_time).count();
@@ -70,6 +84,7 @@ void Search::makePrimaryPath(Node curNode)
         curNode = *curNode.parent;
         hppath.push_back(curNode);
     }
+    hppath.reverse();
 }
 
 /*void Search::makeSecondaryPath()

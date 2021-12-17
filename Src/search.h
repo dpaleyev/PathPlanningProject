@@ -14,6 +14,12 @@
 
 struct Comparator {
     bool operator() (const Node* a, const Node* b) const {
+        if (a->g == b->g) {
+            if (a->i == b->i) {
+                return a->j < b->j;
+            }
+            return a->i < b->i;
+        }
         return a->g < b->g;
     }
 };
@@ -30,7 +36,6 @@ class Search
         Search();
         ~Search(void);
         SearchResult startSearch(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
-        std::vector<std::pair<int, int>> getSucessors(const Map &map, int i, int j);
 
     protected:
         //CODE HERE
