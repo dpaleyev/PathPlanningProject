@@ -62,7 +62,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
-                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->g + d_dist + getHeuristic(start_i, start_j, options, map), s->g + d_dist, getHeuristic(start_i, start_j, options, map), s};
+                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->g + d_dist + getHeuristic(s->i + d_i, s->j + d_j, options, map), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map), s};
                     OPEN_order.insert(s_new);
                     OPEN_find.insert({{s_new->i, s_new->j}, s_new});
                 } else {
