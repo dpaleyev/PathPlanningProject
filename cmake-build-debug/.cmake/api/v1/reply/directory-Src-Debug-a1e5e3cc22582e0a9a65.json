@@ -30,9 +30,9 @@
 			"destination" : "Bin/Debug",
 			"paths" : 
 			[
-				"Src/YourFirstName_YourLastName_ASearch"
+				"Src/Paleyev_Daniel_ASearch"
 			],
-			"targetId" : "YourFirstName_YourLastName_ASearch::@fffd7673bb2fd0d58c2a",
+			"targetId" : "Paleyev_Daniel_ASearch::@fffd7673bb2fd0d58c2a",
 			"targetIndex" : 1,
 			"type" : "target"
 		}

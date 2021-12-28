@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Src/YourFirstName_YourLastName_ASearch"
+			"path" : "Src/Paleyev_Daniel_ASearch"
 		}
 	],
 	"backtrace" : 1,
@@ -65,7 +65,7 @@
 			]
 		}
 	],
-	"id" : "YourFirstName_YourLastName_ASearch::@fffd7673bb2fd0d58c2a",
+	"id" : "Paleyev_Daniel_ASearch::@fffd7673bb2fd0d58c2a",
 	"install" : 
 	{
 		"destinations" : 
@@ -99,8 +99,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "YourFirstName_YourLastName_ASearch",
-	"nameOnDisk" : "YourFirstName_YourLastName_ASearch",
+	"name" : "Paleyev_Daniel_ASearch",
+	"nameOnDisk" : "Paleyev_Daniel_ASearch",
 	"paths" : 
 	{
 		"build" : "Src",

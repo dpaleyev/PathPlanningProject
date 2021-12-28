@@ -23,7 +23,7 @@
 				{
 					"build" : "Src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-Src-Debug-450e2356fc06f0805650.json",
+					"jsonFile" : "directory-Src-Debug-a1e5e3cc22582e0a9a65.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
@@ -63,7 +63,7 @@
 						1,
 						2
 					],
-					"name" : "YourFirstName_YourLastName_ASearch",
+					"name" : "Paleyev_Daniel_ASearch",
 					"targetIndexes" : 
 					[
 						0,
@@ -83,9 +83,9 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "YourFirstName_YourLastName_ASearch::@fffd7673bb2fd0d58c2a",
-					"jsonFile" : "target-YourFirstName_YourLastName_ASearch-Debug-b0b25f4b5ad26f1bf76b.json",
-					"name" : "YourFirstName_YourLastName_ASearch",
+					"id" : "Paleyev_Daniel_ASearch::@fffd7673bb2fd0d58c2a",
+					"jsonFile" : "target-Paleyev_Daniel_ASearch-Debug-3beff4430ad905c99cd6.json",
+					"name" : "Paleyev_Daniel_ASearch",
 					"projectIndex" : 0
 				},
 				{

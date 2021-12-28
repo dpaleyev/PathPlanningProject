@@ -98,6 +98,26 @@ list_install_components:
 list_install_components/fast: list_install_components
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/Cellar/cmake/3.21.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/Cellar/cmake/3.21.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -119,26 +139,6 @@ test:
 # Special rule for the target test
 test/fast: test
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.21.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -186,18 +186,18 @@ PPLIB/fast:
 .PHONY : PPLIB/fast
 
 # Convenience name for target.
-Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/rule:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/rule
-.PHONY : Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/rule
+Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/rule:
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/rule
+.PHONY : Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/rule
 
 # Convenience name for target.
-YourFirstName_YourLastName_ASearch: Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/rule
-.PHONY : YourFirstName_YourLastName_ASearch
+Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/rule
+.PHONY : Paleyev_Daniel_ASearch
 
 # fast build rule for target.
-YourFirstName_YourLastName_ASearch/fast:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build
-.PHONY : YourFirstName_YourLastName_ASearch/fast
+Paleyev_Daniel_ASearch/fast:
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build
+.PHONY : Paleyev_Daniel_ASearch/fast
 
 config.o: config.cpp.o
 .PHONY : config.o
@@ -205,7 +205,7 @@ config.o: config.cpp.o
 # target to build an object file
 config.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/config.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/config.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o
 .PHONY : config.cpp.o
 
 config.i: config.cpp.i
@@ -214,7 +214,7 @@ config.i: config.cpp.i
 # target to preprocess a source file
 config.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/config.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/config.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.i
 .PHONY : config.cpp.i
 
 config.s: config.cpp.s
@@ -223,7 +223,7 @@ config.s: config.cpp.s
 # target to generate assembly for a file
 config.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/config.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/config.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.s
 .PHONY : config.cpp.s
 
 environmentoptions.o: environmentoptions.cpp.o
@@ -232,7 +232,7 @@ environmentoptions.o: environmentoptions.cpp.o
 # target to build an object file
 environmentoptions.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/environmentoptions.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o
 .PHONY : environmentoptions.cpp.o
 
 environmentoptions.i: environmentoptions.cpp.i
@@ -241,7 +241,7 @@ environmentoptions.i: environmentoptions.cpp.i
 # target to preprocess a source file
 environmentoptions.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/environmentoptions.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.i
 .PHONY : environmentoptions.cpp.i
 
 environmentoptions.s: environmentoptions.cpp.s
@@ -250,7 +250,7 @@ environmentoptions.s: environmentoptions.cpp.s
 # target to generate assembly for a file
 environmentoptions.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/environmentoptions.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.s
 .PHONY : environmentoptions.cpp.s
 
 main.o: main.cpp.o
@@ -258,7 +258,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/main.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -266,7 +266,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/main.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -274,7 +274,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/main.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 map.o: map.cpp.o
@@ -283,7 +283,7 @@ map.o: map.cpp.o
 # target to build an object file
 map.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/map.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/map.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o
 .PHONY : map.cpp.o
 
 map.i: map.cpp.i
@@ -292,7 +292,7 @@ map.i: map.cpp.i
 # target to preprocess a source file
 map.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/map.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/map.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.i
 .PHONY : map.cpp.i
 
 map.s: map.cpp.s
@@ -301,7 +301,7 @@ map.s: map.cpp.s
 # target to generate assembly for a file
 map.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/map.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/map.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.s
 .PHONY : map.cpp.s
 
 mission.o: mission.cpp.o
@@ -310,7 +310,7 @@ mission.o: mission.cpp.o
 # target to build an object file
 mission.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/mission.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/mission.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o
 .PHONY : mission.cpp.o
 
 mission.i: mission.cpp.i
@@ -319,7 +319,7 @@ mission.i: mission.cpp.i
 # target to preprocess a source file
 mission.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/mission.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/mission.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.i
 .PHONY : mission.cpp.i
 
 mission.s: mission.cpp.s
@@ -328,7 +328,7 @@ mission.s: mission.cpp.s
 # target to generate assembly for a file
 mission.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/mission.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/mission.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.s
 .PHONY : mission.cpp.s
 
 search.o: search.cpp.o
@@ -337,7 +337,7 @@ search.o: search.cpp.o
 # target to build an object file
 search.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/search.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/search.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o
 .PHONY : search.cpp.o
 
 search.i: search.cpp.i
@@ -346,7 +346,7 @@ search.i: search.cpp.i
 # target to preprocess a source file
 search.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/search.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/search.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.i
 .PHONY : search.cpp.i
 
 search.s: search.cpp.s
@@ -355,7 +355,7 @@ search.s: search.cpp.s
 # target to generate assembly for a file
 search.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/search.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/search.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.s
 .PHONY : search.cpp.s
 
 tinyxml2.o: tinyxml2.cpp.o
@@ -364,7 +364,7 @@ tinyxml2.o: tinyxml2.cpp.o
 # target to build an object file
 tinyxml2.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/tinyxml2.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o
 .PHONY : tinyxml2.cpp.o
 
 tinyxml2.i: tinyxml2.cpp.i
@@ -373,7 +373,7 @@ tinyxml2.i: tinyxml2.cpp.i
 # target to preprocess a source file
 tinyxml2.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/tinyxml2.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.i
 .PHONY : tinyxml2.cpp.i
 
 tinyxml2.s: tinyxml2.cpp.s
@@ -382,7 +382,7 @@ tinyxml2.s: tinyxml2.cpp.s
 # target to generate assembly for a file
 tinyxml2.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/tinyxml2.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.s
 .PHONY : tinyxml2.cpp.s
 
 xmllogger.o: xmllogger.cpp.o
@@ -391,7 +391,7 @@ xmllogger.o: xmllogger.cpp.o
 # target to build an object file
 xmllogger.cpp.o:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/xmllogger.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o
 .PHONY : xmllogger.cpp.o
 
 xmllogger.i: xmllogger.cpp.i
@@ -400,7 +400,7 @@ xmllogger.i: xmllogger.cpp.i
 # target to preprocess a source file
 xmllogger.cpp.i:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.i
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/xmllogger.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.i
 .PHONY : xmllogger.cpp.i
 
 xmllogger.s: xmllogger.cpp.s
@@ -409,7 +409,7 @@ xmllogger.s: xmllogger.cpp.s
 # target to generate assembly for a file
 xmllogger.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.s
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/xmllogger.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.s
 .PHONY : xmllogger.cpp.s
 
 # Help Target
@@ -426,7 +426,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... PPLIB"
-	@echo "... YourFirstName_YourLastName_ASearch"
+	@echo "... Paleyev_Daniel_ASearch"
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"

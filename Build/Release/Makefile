@@ -185,17 +185,17 @@ PPLIB/fast:
 .PHONY : PPLIB/fast
 
 #=============================================================================
-# Target rules for targets named YourFirstName_YourLastName_ASearch
+# Target rules for targets named Paleyev_Daniel_ASearch
 
 # Build rule for target.
-YourFirstName_YourLastName_ASearch: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 YourFirstName_YourLastName_ASearch
-.PHONY : YourFirstName_YourLastName_ASearch
+Paleyev_Daniel_ASearch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Paleyev_Daniel_ASearch
+.PHONY : Paleyev_Daniel_ASearch
 
 # fast build rule for target.
-YourFirstName_YourLastName_ASearch/fast:
-	$(MAKE) $(MAKESILENT) -f Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build.make Src/CMakeFiles/YourFirstName_YourLastName_ASearch.dir/build
-.PHONY : YourFirstName_YourLastName_ASearch/fast
+Paleyev_Daniel_ASearch/fast:
+	$(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build
+.PHONY : Paleyev_Daniel_ASearch/fast
 
 #=============================================================================
 # Target rules for targets named testbench
@@ -224,7 +224,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... PPLIB"
-	@echo "... YourFirstName_YourLastName_ASearch"
+	@echo "... Paleyev_Daniel_ASearch"
 	@echo "... testbench"
 .PHONY : help
 

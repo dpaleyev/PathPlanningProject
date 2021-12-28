@@ -911,7 +911,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "YourFirstName_YourLastName_ASearch"
+			"value" : "Paleyev_Daniel_ASearch"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1192,6 +1192,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "Paleyev_Daniel_ASearch_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/danny.paleyev/PathPlanningProject/cmake-build-debug"
+		},
+		{
+			"name" : "Paleyev_Daniel_ASearch_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Paleyev_Daniel_ASearch_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/danny.paleyev/PathPlanningProject"
 		},
 		{
 			"name" : "ProcessorCount_cmd_sysctl",
