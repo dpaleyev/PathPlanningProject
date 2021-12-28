@@ -6,7 +6,14 @@ Search::Search()
 //set defaults here
 }
 
-Search::~Search() {}
+Search::~Search() {
+    for (auto& x : OPEN_find) {
+        delete x.second;
+    }
+    for (auto& x : CLOSED) {
+        delete x.second;
+    }
+}
 
 
 SearchResult Search::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
@@ -14,7 +21,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     auto start_time = std::chrono::system_clock::now();
     sresult.pathfound = false;
     auto [start_i, start_j] = map.getStart();
-    Node* start = new Node {start_i, start_j, 0, 0, 0, nullptr};
+    Node* start = new Node {start_i, start_j, getHeuristic(start_i, start_j, options, map), 0, getHeuristic(start_i, start_j, options, map), nullptr};
     OPEN_order.insert(start);
     OPEN_find.insert({{start->i, start->j}, start});
 
@@ -55,7 +62,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
-                    Node *s_new = new Node{s->i + d_i, s->j + d_j, 0, s->g + d_dist, 0, s};
+                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->g + d_dist + getHeuristic(start_i, start_j, options, map), s->g + d_dist, getHeuristic(start_i, start_j, options, map), s};
                     OPEN_order.insert(s_new);
                     OPEN_find.insert({{s_new->i, s_new->j}, s_new});
                 } else {
@@ -123,5 +130,19 @@ void Search::makeSecondaryPath()
             d_j = cur.j - last_node.j;
         }
         hppath.push_back(*iter);
+    }
+}
+
+double Search::getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map) {
+    auto [i_finish, j_finish] = map.getGoal();
+    int i_d = abs(i_cur - i_finish), j_d = abs(j_cur - j_finish);
+    if (options.metrictype == 0) {
+        return CN_SQRT_TWO * std::min(i_d, j_d) + abs(i_d - j_d);
+    } else if (options.metrictype == 1) {
+        return i_d + j_d;
+    } else if (options.metrictype == 2) {
+        return sqrt(pow(i_d, 2) + pow(j_d, 2));
+    } else if (options.metrictype == 3) {
+        return std::max(i_d, j_d);
     }
 }

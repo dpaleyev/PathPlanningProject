@@ -20,7 +20,7 @@ struct Comparator {
             }
             return a->i < b->i;
         }
-        return a->g < b->g;
+        return a->F < b->F;
     }
 };
 
@@ -61,5 +61,6 @@ class Search
         //CODE HERE to define other members of the class
         void makePrimaryPath(Node curNode);
         void makeSecondaryPath();
+        double getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map);
 };
 #endif
