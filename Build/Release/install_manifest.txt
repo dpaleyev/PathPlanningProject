@@ -1,1 +1,1 @@
-/Users/danny.paleyev/PathPlanningProject/Bin/Release/YourFirstName_YourLastName_ASearch
+/Users/danny.paleyev/PathPlanningProject/Bin/Release/Paleyev_Daniel_ASearch
