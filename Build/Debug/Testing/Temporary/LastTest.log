@@ -1,10 +1,10 @@
-Start testing: Dec 17 21:08 MSK
+Start testing: Dec 28 17:56 MSK
 ----------------------------------------------------------
 1/12 Testing: Test1
 1/12 Test: Test1
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/0_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test1" start time: Dec 17 21:08 MSK
+"Test1" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 tiny
@@ -12,13 +12,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.43 sec
+Test time =   0.69 sec
 ----------------------------------------------------------
-Test Failed.
-"Test1" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test1" end time: Dec 28 17:56 MSK
 "Test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -26,7 +24,7 @@ Test Failed.
 2/12 Test: Test2
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/1_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test2" start time: Dec 17 21:08 MSK
+"Test2" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 tiny
@@ -34,13 +32,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
 Test time =   0.43 sec
 ----------------------------------------------------------
-Test Failed.
-"Test2" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test2" end time: Dec 28 17:56 MSK
 "Test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -48,7 +44,7 @@ Test Failed.
 3/12 Test: Test3
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/2_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test3" start time: Dec 17 21:08 MSK
+"Test3" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -58,13 +54,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
 Test time =   0.42 sec
 ----------------------------------------------------------
-Test Failed.
-"Test3" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test3" end time: Dec 28 17:56 MSK
 "Test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -72,7 +66,7 @@ Test Failed.
 4/12 Test: Test4
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/3_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test4" start time: Dec 17 21:08 MSK
+"Test4" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -82,13 +76,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.49 sec
 ----------------------------------------------------------
-Test Failed.
-"Test4" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test4" end time: Dec 28 17:56 MSK
 "Test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -96,7 +88,7 @@ Test Failed.
 5/12 Test: Test5
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/4_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test5" start time: Dec 17 21:08 MSK
+"Test5" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -106,13 +98,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.41 sec
+Test time =   0.46 sec
 ----------------------------------------------------------
-Test Failed.
-"Test5" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test5" end time: Dec 28 17:56 MSK
 "Test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -120,7 +110,7 @@ Test Failed.
 6/12 Test: Test6
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/5_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test6" start time: Dec 17 21:08 MSK
+"Test6" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -130,13 +120,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.37 sec
 ----------------------------------------------------------
-Test Failed.
-"Test6" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test6" end time: Dec 28 17:56 MSK
 "Test6" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -144,7 +132,7 @@ Test Failed.
 7/12 Test: Test7
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/6_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test7" start time: Dec 17 21:08 MSK
+"Test7" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -154,13 +142,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
 Test time =   0.41 sec
 ----------------------------------------------------------
-Test Failed.
-"Test7" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test7" end time: Dec 28 17:56 MSK
 "Test7" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -168,7 +154,7 @@ Test Failed.
 8/12 Test: Test8
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/7_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test8" start time: Dec 17 21:08 MSK
+"Test8" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -178,13 +164,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.41 sec
 ----------------------------------------------------------
-Test Failed.
-"Test8" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test8" end time: Dec 28 17:56 MSK
 "Test8" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -192,7 +176,7 @@ Test Failed.
 9/12 Test: Test9
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/8_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test9" start time: Dec 17 21:08 MSK
+"Test9" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -202,13 +186,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.41 sec
 ----------------------------------------------------------
-Test Failed.
-"Test9" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test9" end time: Dec 28 17:56 MSK
 "Test9" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -216,7 +198,7 @@ Test Failed.
 10/12 Test: Test10
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/9_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test10" start time: Dec 17 21:08 MSK
+"Test10" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 Warning! Value of'metrictype' is not correctly specified.
@@ -226,13 +208,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
-Test Failed.
-"Test10" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test10" end time: Dec 28 17:56 MSK
 "Test10" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -240,7 +220,7 @@ Test Failed.
 11/12 Test: Test11
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/A_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test11" start time: Dec 17 21:08 MSK
+"Test11" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 tiny
@@ -248,13 +228,11 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.43 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
-Test Failed.
-"Test11" end time: Dec 17 21:08 MSK
+Test Passed.
+"Test11" end time: Dec 28 17:56 MSK
 "Test11" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -262,7 +240,7 @@ Test Failed.
 12/12 Test: Test12
 Command: "/Users/danny.paleyev/PathPlanningProject/build/Debug/Tests/testbench" "../../../TestData/B_test.xml"
 Directory: /Users/danny.paleyev/PathPlanningProject/build/Debug/Tests
-"Test12" start time: Dec 17 21:08 MSK
+"Test12" start time: Dec 28 17:56 MSK
 Output:
 ----------------------------------------------------------
 tiny
@@ -270,14 +248,12 @@ Warning! Value of 'logpath' tag is missing!
 Value of 'logpath' tag was defined to 'current directory'.
 Warning! Value of 'logfilename' tag is missing.
 Value of 'logfilename' tag was defined to default (original filename +'_log' + original file extension.
-3196.49
-Incorrect path legth
 <end of output>
-Test time =   0.42 sec
+Test time =   0.35 sec
 ----------------------------------------------------------
-Test Failed.
-"Test12" end time: Dec 17 21:09 MSK
+Test Passed.
+"Test12" end time: Dec 28 17:56 MSK
 "Test12" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 17 21:09 MSK
+End testing: Dec 28 17:56 MSK

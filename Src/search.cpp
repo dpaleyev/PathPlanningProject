@@ -40,7 +40,19 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 if (map.CellIsObstacle(s->i + d_i, s->j + d_j)) {
                     continue;
                 }
-                double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO * map.getCellSize() : map.getCellSize();
+
+                if (abs(d_i) == abs(d_j)) {
+                    if (!options.allowdiagonal) {
+                        continue;
+                    }
+                    if (!options.allowdiagonal && map.CellIsObstacle(s->i + d_i, s->j) && map.CellIsObstacle(s->i, s->j + d_j)) {
+                        continue;
+                    }
+                    if (!options.cutcorners && (map.CellIsObstacle(s->i + d_i, s->j) || map.CellIsObstacle(s->i, s->j + d_j))) {
+                        continue;
+                    }
+                }
+                double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
                     Node *s_new = new Node{s->i + d_i, s->j + d_j, 0, s->g + d_dist, 0, s};
@@ -64,7 +76,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     if (sresult.pathfound) {
         sresult.pathlength = head->g;
         makePrimaryPath(*head);
-        std::cerr << head->g << '\n';
+        makeSecondaryPath();
     }
 
     sresult.nodescreated = OPEN_find.size() + CLOSED.size();
@@ -87,7 +99,29 @@ void Search::makePrimaryPath(Node curNode)
     hppath.reverse();
 }
 
-/*void Search::makeSecondaryPath()
+void Search::makeSecondaryPath()
 {
-    //need to implement
-}*/
+    if (lppath.empty()) {
+        return;
+    }
+    int d_i = lppath.begin()->i, d_j = lppath.begin()->j;
+    hppath.push_back(*lppath.begin());
+    if (lppath.size() == 1) {
+        return;
+    }
+    hppath.push_back(*(lppath.begin()++));
+    d_i = hppath.back().i - d_i;
+    d_j = hppath.back().j - d_j;
+    for (auto iter = ++(++hppath.begin()); iter != hppath.end(); ++iter) {
+        auto last_node = hppath.back();
+        auto cur = *iter;
+        if (d_i == cur.i - last_node.i && d_j == cur.j - last_node.j) {
+            hppath.pop_back();
+            hppath.push_back(*iter);
+        } else {
+            d_i = cur.i - last_node.i;
+            d_j = cur.j - last_node.j;
+        }
+        hppath.push_back(*iter);
+    }
+}
