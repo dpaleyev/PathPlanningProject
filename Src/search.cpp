@@ -70,6 +70,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                         Node *s_new = OPEN_find[{s->i + d_i, s->j + d_j}];
                         if (s->g + d_dist < s_new->g) {
                             s_new->g = s->g + d_dist;
+                            s_new->F = s_new->g + s_new->H;
                             s_new->parent = s;
                         }
                     }
