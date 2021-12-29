@@ -72,6 +72,8 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                             s_new->g = s->g + d_dist;
                             s_new->F = s_new->g + s_new->H;
                             s_new->parent = s;
+                            OPEN_order.erase(s_new);
+                            OPEN_order.insert(s_new);
                         }
                     }
                 }
