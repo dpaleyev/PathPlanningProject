@@ -22,8 +22,9 @@ class Map
 {
     private:
         int     height, width;
-        int     start_i, start_j;
-        int     goal_i, goal_j;
+        int     agents_n;
+        std::vector<int>     start_i, start_j;
+        std::vector<int>     goal_i, goal_j;
         double  cellSize;
         int**   Grid;
 

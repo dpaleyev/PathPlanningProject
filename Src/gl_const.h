@@ -17,6 +17,8 @@
         #define CNS_TAG_FINY        "finishy"
         #define CNS_TAG_GRID        "grid"
             #define CNS_TAG_ROW     "row"
+        #define CNS_TAG_AGENTSN     "agentsnumber"
+        #define CNS_TAG_AGENT       "agent"
 
     #define CNS_TAG_ALG             "algorithm"
         #define CNS_TAG_ST          "searchtype"
