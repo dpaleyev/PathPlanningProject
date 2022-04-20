@@ -133,46 +133,54 @@ void XmlLogger::writeToLogMap(const Map &map, const std::list<Node> &path)
 
 }*/
 
-void XmlLogger::writeToLogPath(const std::list<Node> &path)
+void XmlLogger::writeToLogPath(const std::vector<std::list<Node>> &path)
 {
     if (loglevel == CN_LP_LEVEL_NOPE_WORD || loglevel == CN_LP_LEVEL_TINY_WORD || path.empty())
         return;
-    int iterate = 0;
     XMLElement *lplevel = doc.FirstChildElement(CNS_TAG_ROOT);
     lplevel = lplevel->FirstChildElement(CNS_TAG_LOG)->FirstChildElement(CNS_TAG_LPLEVEL);
-
-    for (std::list<Node>::const_iterator it = path.begin(); it != path.end(); it++) {
-        XMLElement *element = doc.NewElement(CNS_TAG_POINT);
-        element->SetAttribute(CNS_TAG_ATTR_X, it->j);
-        element->SetAttribute(CNS_TAG_ATTR_Y, it->i);
-        element->SetAttribute(CNS_TAG_ATTR_NUM, iterate);
-        lplevel->InsertEndChild(element);
-        iterate++;
+    for (int i = 0; i < path.size(); ++i) {
+        XMLElement *agent = doc.NewElement(CNS_TAG_AGENT);
+        agent->SetAttribute(CNS_TAG_ATTR_NUM, i);
+        int iterate = 0;
+        for (std::list<Node>::const_iterator it = path[i].begin(); it != path[i].end(); it++) {
+            XMLElement *element = doc.NewElement(CNS_TAG_POINT);
+            element->SetAttribute(CNS_TAG_ATTR_X, it->j);
+            element->SetAttribute(CNS_TAG_ATTR_Y, it->i);
+            element->SetAttribute(CNS_TAG_ATTR_NUM, iterate);
+            agent->InsertEndChild(element);
+            iterate++;
+        }
+        lplevel->LinkEndChild(agent);
     }
 }
 
-void XmlLogger::writeToLogHPpath(const std::list<Node> &hppath)
+void XmlLogger::writeToLogHPpath(const std::vector<std::list<Node>> &hppath)
 {
     if (loglevel == CN_LP_LEVEL_NOPE_WORD || loglevel == CN_LP_LEVEL_TINY_WORD || hppath.empty())
         return;
-    int partnumber = 0;
     XMLElement *hplevel = doc.FirstChildElement(CNS_TAG_ROOT);
     hplevel = hplevel->FirstChildElement(CNS_TAG_LOG)->FirstChildElement(CNS_TAG_HPLEVEL);
-    std::list<Node>::const_iterator iter = hppath.begin();
-    std::list<Node>::const_iterator it = hppath.begin();
-
-    while (iter != --hppath.end()) {
-        XMLElement *part = doc.NewElement(CNS_TAG_SECTION);
-        part->SetAttribute(CNS_TAG_ATTR_NUM, partnumber);
-        part->SetAttribute(CNS_TAG_ATTR_STX, it->j);
-        part->SetAttribute(CNS_TAG_ATTR_STY, it->i);
-        ++iter;
-        part->SetAttribute(CNS_TAG_ATTR_FINX, iter->j);
-        part->SetAttribute(CNS_TAG_ATTR_FINY, iter->i);
-        part->SetAttribute(CNS_TAG_ATTR_LENGTH, iter->g - it->g);
-        hplevel->LinkEndChild(part);
-        ++it;
-        ++partnumber;
+    for (int i = 0; i < hppath.size(); ++i) {
+        XMLElement *agent = doc.NewElement(CNS_TAG_AGENT);
+        agent->SetAttribute(CNS_TAG_ATTR_NUM, i);
+        int partnumber = 0;
+        std::list<Node>::const_iterator iter = hppath[i].begin();
+        std::list<Node>::const_iterator it = hppath[i].begin();
+        while (iter != --hppath[i].end()) {
+            XMLElement *part = doc.NewElement(CNS_TAG_SECTION);
+            part->SetAttribute(CNS_TAG_ATTR_NUM, partnumber);
+            part->SetAttribute(CNS_TAG_ATTR_STX, it->j);
+            part->SetAttribute(CNS_TAG_ATTR_STY, it->i);
+            ++iter;
+            part->SetAttribute(CNS_TAG_ATTR_FINX, iter->j);
+            part->SetAttribute(CNS_TAG_ATTR_FINY, iter->i);
+            part->SetAttribute(CNS_TAG_ATTR_LENGTH, iter->g - it->g);
+            agent->LinkEndChild(part);
+            ++it;
+            ++partnumber;
+        }
+        hplevel->LinkEndChild(agent);
     }
 }
 

@@ -22,9 +22,9 @@ public:
 
     //void writeToLogOpenClose(const typename &open, const typename &close);
 
-    void writeToLogPath(const std::list<Node> &path);
+    void writeToLogPath(const std::vector<std::list<Node>> &path);
 
-    void writeToLogHPpath(const std::list<Node> &hppath);
+    void writeToLogHPpath(const std::vector<std::list<Node>> &hppath);
 
     void writeToLogNotFound();
 
