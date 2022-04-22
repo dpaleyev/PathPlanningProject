@@ -3,12 +3,12 @@
 
 #include "map.h"
 #include "config.h"
-#include "search.h"
 #include "ilogger.h"
 #include "searchresult.h"
 #include "environmentoptions.h"
 #include "search.h"
 #include "xmllogger.h"
+#include "highLevelSearch.h"
 
 //That's the wrap up class that first creates all the needed objects (Map, Search etc.)
 //and then runs the search and then cleans everything up.
@@ -31,16 +31,16 @@ class Mission
         void startSearch();
         void printSearchResultsToConsole();
         void saveSearchResultsToLog();
-        SearchResult getSearchResult();
         
     private:
         Map                     map;
         Config                  config;
         EnvironmentOptions      options;
-        Search                  search;
+        HighLevelSearch         search;
         ILogger*                logger;
         const char*             fileName;
-        SearchResult            sr;
+        HighLevelResults        hsr;
+        long long               time;
 };
 
 #endif

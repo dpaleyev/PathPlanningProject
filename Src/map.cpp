@@ -451,4 +451,10 @@ int Map::getAgentsNumber() const {
     return agents_n;
 }
 
-//TODO: getter for start and goal
+std::pair<int, int> Map::getStart(int agent_id) const {
+    return {start_i[agent_id], start_j[agent_id]};
+}
+
+std::pair<int, int> Map::getGoal(int agent_id) const {
+    return {goal_i[agent_id], goal_j[agent_id]};
+}

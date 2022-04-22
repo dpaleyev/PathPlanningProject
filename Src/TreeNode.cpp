@@ -3,7 +3,11 @@
 //
 
 #include "TreeNode.h"
-#include "search.h"
+//
+// Created by Даниил Палеев on 22.04.2022.
+//
+
+#include "TreeNode.h"
 
 void TreeNode::findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptions &options) {
     paths = {};

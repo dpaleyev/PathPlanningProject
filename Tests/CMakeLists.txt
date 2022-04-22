@@ -1,6 +1,6 @@
 include_directories(../Src)
 
-add_executable(testbench testbench.cpp ../Src/highLevelSearch.cpp ../Src/highLevelSearch.h)
+add_executable(testbench testbench.cpp)
 
 target_link_libraries(testbench PPLIB)
 

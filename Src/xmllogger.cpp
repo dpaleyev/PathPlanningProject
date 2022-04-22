@@ -184,7 +184,7 @@ void XmlLogger::writeToLogHPpath(const std::vector<std::list<Node>> &hppath)
     }
 }
 
-void XmlLogger::writeToLogSummary(unsigned int numberofsteps, unsigned int nodescreated, float length, double time, double cellSize)
+void XmlLogger::writeToLogSummary(float length, double time, double cellSize)
 {
     if (loglevel == CN_LP_LEVEL_NOPE_WORD)
         return;
@@ -192,8 +192,6 @@ void XmlLogger::writeToLogSummary(unsigned int numberofsteps, unsigned int nodes
     XMLElement *summary = doc.FirstChildElement(CNS_TAG_ROOT);
     summary = summary->FirstChildElement(CNS_TAG_LOG)->FirstChildElement(CNS_TAG_SUM);
     XMLElement *element = summary->ToElement();
-    element->SetAttribute(CNS_TAG_ATTR_NUMOFSTEPS, numberofsteps);
-    element->SetAttribute(CNS_TAG_ATTR_NODESCREATED, nodescreated);
     element->SetAttribute(CNS_TAG_ATTR_LENGTH, length);
     element->SetAttribute(CNS_TAG_ATTR_LENGTH_SCALED, length*cellSize);
     element->SetAttribute(CNS_TAG_ATTR_TIME, std::to_string(time).c_str());

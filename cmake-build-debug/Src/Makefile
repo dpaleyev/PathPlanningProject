@@ -204,6 +204,7 @@ TreeNode.o: TreeNode.cpp.o
 
 # target to build an object file
 TreeNode.cpp.o:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/TreeNode.cpp.o
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o
 .PHONY : TreeNode.cpp.o
 
@@ -212,6 +213,7 @@ TreeNode.i: TreeNode.cpp.i
 
 # target to preprocess a source file
 TreeNode.cpp.i:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/TreeNode.cpp.i
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i
 .PHONY : TreeNode.cpp.i
 
@@ -220,6 +222,7 @@ TreeNode.s: TreeNode.cpp.s
 
 # target to generate assembly for a file
 TreeNode.cpp.s:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/TreeNode.cpp.s
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s
 .PHONY : TreeNode.cpp.s
 

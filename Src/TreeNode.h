@@ -1,3 +1,7 @@
+//
+// Created by Даниил Палеев on 22.04.2022.
+//
+
 #ifndef PALEYEV_DANIEL_ASEARCH_TREENODE_H
 #define PALEYEV_DANIEL_ASEARCH_TREENODE_H
 #include <utility>
@@ -8,6 +12,7 @@
 #include "map.h"
 #include "environmentoptions.h"
 #include "ilogger.h"
+#include "search.h"
 
 
 struct Constraint {
@@ -19,14 +24,14 @@ struct Constraint {
 class TreeNode {
 public:
     float totalCost = 0;
-    std::unordered_map<int, std::unordered_map<int, std::vector<std::pair<int, int>>>> constraints;
+    std::unordered_map<int, std::unordered_map<int, std::unordered_set<std::pair<int, int>, pair_hash>>> constraints;
     std::vector<std::shared_ptr<std::list<Node>>> paths;
     std::vector<float> costs;
 
     TreeNode() = default;
 
     TreeNode(TreeNode& node, Constraint& constraint) : totalCost(node.totalCost), constraints(node.constraints), paths(node.paths), costs(node.costs) {
-        constraints[constraint.id][constraint.time].push_back(constraint.cell);
+        constraints[constraint.id][constraint.time].insert(constraint.cell);
     }
 
     void findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
@@ -36,4 +41,4 @@ public:
 
 };
 
-#endif //PALEYEV_DANIEL_ASEARCH_HIGHLEVELSEARCH_H
+#endif //PALEYEV_DANIEL_ASEARCH_TREENODE_H

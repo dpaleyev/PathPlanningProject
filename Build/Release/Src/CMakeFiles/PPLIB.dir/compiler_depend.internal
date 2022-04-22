@@ -731,11 +731,6 @@ Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/math.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__node_handle
  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/optional
- /Users/danny.paleyev/PathPlanningProject/Src/search.h
- /Users/danny.paleyev/PathPlanningProject/Src/searchresult.h
- /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/set
- /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tree
- /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/unordered_set
 
 Src/CMakeFiles/PPLIB.dir/map.cpp.o
  /Users/danny.paleyev/PathPlanningProject/Src/map.cpp

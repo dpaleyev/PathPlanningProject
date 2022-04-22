@@ -5,7 +5,7 @@
         <height>25</height>
         <agentsnumber>2</agentsnumber>
         <cellsize>24</cellsize>
-        <startx>12
+        <startx>
             <agent>12</agent>
             <agent>3</agent>
         </startx>

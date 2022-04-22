@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o"
-  "CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o.d"
   "CMakeFiles/testbench.dir/testbench.cpp.o"
   "CMakeFiles/testbench.dir/testbench.cpp.o.d"
   "testbench"

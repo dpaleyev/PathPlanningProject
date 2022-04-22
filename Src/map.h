@@ -42,8 +42,8 @@ class Map
         int getMapWidth() const;
         int getAgentsNumber() const;
         double getCellSize() const;
-        std::pair<int, int> getStart() const;
-        std::pair<int, int> getGoal() const;
+        std::pair<int, int> getStart(int agent_id) const;
+        std::pair<int, int> getGoal(int agent_id) const;
 
 };
 

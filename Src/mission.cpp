@@ -52,39 +52,33 @@ void Mission::createSearch()
 
 void Mission::startSearch()
 {
-    sr = search.startSearch(logger, map, options);
+    auto start_time = std::chrono::system_clock::now();
+    hsr = search.solve(logger, map, options);
+    time = (std::chrono::system_clock::now() - start_time).count();
 }
 
 void Mission::printSearchResultsToConsole()
 {
     std::cout << "Path ";
-    if (!sr.pathfound)
+    if (hsr.totalCost == -1)
         std::cout << "NOT ";
     std::cout << "found!" << std::endl;
-    std::cout << "numberofsteps=" << sr.numberofsteps << std::endl;
-    std::cout << "nodescreated=" << sr.nodescreated << std::endl;
-    if (sr.pathfound) {
-        std::cout << "pathlength=" << sr.pathlength << std::endl;
-        std::cout << "pathlength_scaled=" << sr.pathlength * map.getCellSize() << std::endl;
+    if (hsr.totalCost != -1) {
+        std::cout << "pathlength=" << hsr.totalCost << std::endl;
+        std::cout << "pathlength_scaled=" << hsr.totalCost * map.getCellSize() << std::endl;
     }
-    std::cout << "time=" << sr.time << std::endl;
+    std::cout << "time=" << time << std::endl;
 }
 
 void Mission::saveSearchResultsToLog()
 {
-    logger->writeToLogSummary(sr.numberofsteps, sr.nodescreated, sr.pathlength, sr.time, map.getCellSize());
-    if (sr.pathfound) {
-        //TODO:Change logger
-        //logger->writeToLogPath(*sr.lppath);
+    logger->writeToLogSummary( hsr.totalCost, time, map.getCellSize());
+    if (hsr.totalCost == -1) {
+        logger->writeToLogPath(hsr.paths);
         //logger->writeToLogHPpath(*sr.hppath);
         //logger->writeToLogMap(map, *sr.lppath);
     } else
         logger->writeToLogNotFound();
     logger->saveLog();
-}
-
-SearchResult Mission::getSearchResult()
-{
-    return sr;
 }
 

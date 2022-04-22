@@ -16,12 +16,12 @@ Search::~Search() {
 }
 
 
-SearchResult Search::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::vector<std::pair<int, int>>>& constraints)
+SearchResult Search::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::unordered_set<std::pair<int, int>, pair_hash>>& constraints)
 {
     auto start_time = std::chrono::system_clock::now();
     sresult.pathfound = false;
-    auto [start_i, start_j] = map.getStart();
-    Node* start = new Node {start_i, start_j, getHeuristic(start_i, start_j, options, map), 0, getHeuristic(start_i, start_j, options, map), nullptr};
+    auto [start_i, start_j] = map.getStart(agent_id);
+    Node* start = new Node {start_i, start_j, 0, getHeuristic(start_i, start_j, options, map, agent_id), 0, getHeuristic(start_i, start_j, options, map, agent_id), nullptr};
     OPEN_order.insert(start);
     OPEN_find.insert({{start->i, start->j}, start});
 
@@ -31,13 +31,18 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
         OPEN_order.erase(OPEN_order.begin());
         OPEN_find.erase({s->i, s->j});
         CLOSED.insert({{s->i, s->j}, s});
-        if (std::make_pair(s->i, s->j) == map.getGoal()) {
+        if (std::make_pair(s->i, s->j) == map.getGoal(agent_id)) {
             sresult.pathfound = true;
             head = s;
             break;
         }
         for (int d_i = -1; d_i <= 1; d_i++) {
             for (int d_j = -1; d_j <= 1; d_j++) {
+                if (constraints.find(s->step + 1) != constraints.end()) {
+                    if (constraints.at(s->step + 1).find({s->i + d_i, s->j + d_j}) != constraints.at(s->step + 1).end()) {
+                        continue;
+                    }
+                }
                 if (d_i == 0 && d_j == 0) {
                     continue;
                 }
@@ -62,7 +67,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
-                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->g + d_dist + getHeuristic(s->i + d_i, s->j + d_j, options, map), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map), s};
+                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->g + d_dist + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
                     OPEN_order.insert(s_new);
                     OPEN_find.insert({{s_new->i, s_new->j}, s_new});
                 } else {
@@ -136,8 +141,8 @@ void Search::makeSecondaryPath()
     }
 }
 
-double Search::getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map) {
-    auto [i_finish, j_finish] = map.getGoal();
+double Search::getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map, int agent_id) {
+    auto [i_finish, j_finish] = map.getGoal(agent_id);
     int i_d = abs(i_cur - i_finish), j_d = abs(j_cur - j_finish);
     if (options.metrictype == 0) {
         return CN_SQRT_TWO * std::min(i_d, j_d) + abs(i_d - j_d);

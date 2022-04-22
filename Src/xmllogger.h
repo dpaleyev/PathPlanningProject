@@ -18,7 +18,7 @@ public:
 
     void saveLog();
 
-    void writeToLogMap(const Map &Map, const std::list<Node> &path);
+    //void writeToLogMap(const Map &Map, const std::list<Node> &path);
 
     //void writeToLogOpenClose(const typename &open, const typename &close);
 
@@ -28,7 +28,7 @@ public:
 
     void writeToLogNotFound();
 
-    void writeToLogSummary(unsigned int numberofsteps, unsigned int nodescreated, float length, double time, double cellSize);
+    void writeToLogSummary(float length, double time, double cellSize);
 
 private:
     std::string LogFileName;

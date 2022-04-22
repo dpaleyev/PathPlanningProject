@@ -11,6 +11,13 @@
 #include <set>
 #include <unordered_map>
 #include <utility>
+#include <unordered_set>
+
+struct pair_hash {
+    inline std::size_t operator()(const std::pair<int,int> & v) const {
+        return v.first*1000000+v.second;
+    }
+};
 
 struct Comparator {
     bool operator() (const Node* a, const Node* b) const {
@@ -35,7 +42,7 @@ class Search
     public:
         Search();
         ~Search(void);
-        SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::vector<std::pair<int, int>>>& constraints);
+        SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::unordered_set<std::pair<int, int>, pair_hash>>& constraints);
 
     protected:
         //CODE HERE
@@ -61,6 +68,6 @@ class Search
         //CODE HERE to define other members of the class
         void makePrimaryPath(Node curNode);
         void makeSecondaryPath();
-        double getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map);
+        static double getHeuristic(int i_cur, int j_cur, const EnvironmentOptions &options, const Map& map, int agent_id);
 };
 #endif
