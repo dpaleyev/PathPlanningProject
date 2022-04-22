@@ -88,7 +88,7 @@ void XmlLogger::saveLog()
     doc.SaveFile(LogFileName.c_str());
 }
 
-void XmlLogger::writeToLogMap(const Map &map, const std::list<Node> &path)
+/*void XmlLogger::writeToLogMap(const Map &map, const std::list<Node> &path)
 {
     if (loglevel == CN_LP_LEVEL_NOPE_WORD || loglevel == CN_LP_LEVEL_TINY_WORD)
         return;
@@ -122,7 +122,7 @@ void XmlLogger::writeToLogMap(const Map &map, const std::list<Node> &path)
         str.clear();
         iterate++;
     }
-}
+}*/
 
 /*void XmlLogger::writeToLogOpenClose(const typename &open, const typename &close)
 {

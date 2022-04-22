@@ -35,7 +35,7 @@ class Search
     public:
         Search();
         ~Search(void);
-        SearchResult startSearch(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
+        SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::vector<std::pair<int, int>>>& constraints);
 
     protected:
         //CODE HERE

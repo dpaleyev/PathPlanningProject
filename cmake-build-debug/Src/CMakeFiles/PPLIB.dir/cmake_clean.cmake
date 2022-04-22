@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PPLIB.dir/config.cpp.o"
   "CMakeFiles/PPLIB.dir/environmentoptions.cpp.o"
+  "CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o"
   "CMakeFiles/PPLIB.dir/map.cpp.o"
   "CMakeFiles/PPLIB.dir/mission.cpp.o"
   "CMakeFiles/PPLIB.dir/search.cpp.o"

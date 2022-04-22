@@ -447,4 +447,8 @@ double Map::getCellSize() const
       return cellSize;
 }
 
+int Map::getAgentsNumber() const {
+    return agents_n;
+}
+
 //TODO: getter for start and goal

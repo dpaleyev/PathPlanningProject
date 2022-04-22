@@ -66,9 +66,22 @@ include Src/CMakeFiles/PPLIB.dir/progress.make
 # Include the compile flags for this target's objects.
 include Src/CMakeFiles/PPLIB.dir/flags.make
 
+Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
+Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o: ../Src/highLevelSearch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp
+
+Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PPLIB.dir/highLevelSearch.cpp.i"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp > CMakeFiles/PPLIB.dir/highLevelSearch.cpp.i
+
+Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PPLIB.dir/highLevelSearch.cpp.s"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp -o CMakeFiles/PPLIB.dir/highLevelSearch.cpp.s
+
 Src/CMakeFiles/PPLIB.dir/config.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/config.cpp.o: ../Src/config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Src/CMakeFiles/PPLIB.dir/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Src/CMakeFiles/PPLIB.dir/config.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/config.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/config.cpp
 
 Src/CMakeFiles/PPLIB.dir/config.cpp.i: cmake_force
@@ -81,7 +94,7 @@ Src/CMakeFiles/PPLIB.dir/config.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o: ../Src/environmentoptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/environmentoptions.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.cpp
 
 Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.i: cmake_force
@@ -94,7 +107,7 @@ Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/map.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/map.cpp.o: ../Src/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Src/CMakeFiles/PPLIB.dir/map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Src/CMakeFiles/PPLIB.dir/map.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/map.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/map.cpp
 
 Src/CMakeFiles/PPLIB.dir/map.cpp.i: cmake_force
@@ -107,7 +120,7 @@ Src/CMakeFiles/PPLIB.dir/map.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/mission.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/mission.cpp.o: ../Src/mission.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Src/CMakeFiles/PPLIB.dir/mission.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Src/CMakeFiles/PPLIB.dir/mission.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/mission.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/mission.cpp
 
 Src/CMakeFiles/PPLIB.dir/mission.cpp.i: cmake_force
@@ -120,7 +133,7 @@ Src/CMakeFiles/PPLIB.dir/mission.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/search.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/search.cpp.o: ../Src/search.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Src/CMakeFiles/PPLIB.dir/search.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Src/CMakeFiles/PPLIB.dir/search.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/search.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/search.cpp
 
 Src/CMakeFiles/PPLIB.dir/search.cpp.i: cmake_force
@@ -133,7 +146,7 @@ Src/CMakeFiles/PPLIB.dir/search.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o: ../Src/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/tinyxml2.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.cpp
 
 Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.i: cmake_force
@@ -146,7 +159,7 @@ Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.s: cmake_force
 
 Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o: Src/CMakeFiles/PPLIB.dir/flags.make
 Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o: ../Src/xmllogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PPLIB.dir/xmllogger.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/xmllogger.cpp
 
 Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.i: cmake_force
@@ -159,6 +172,7 @@ Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.s: cmake_force
 
 # Object files for target PPLIB
 PPLIB_OBJECTS = \
+"CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o" \
 "CMakeFiles/PPLIB.dir/config.cpp.o" \
 "CMakeFiles/PPLIB.dir/environmentoptions.cpp.o" \
 "CMakeFiles/PPLIB.dir/map.cpp.o" \
@@ -170,6 +184,7 @@ PPLIB_OBJECTS = \
 # External object files for target PPLIB
 PPLIB_EXTERNAL_OBJECTS =
 
+Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/config.cpp.o
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.o
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/map.cpp.o
@@ -179,7 +194,7 @@ Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/tinyxml2.cpp.o
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/xmllogger.cpp.o
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/build.make
 Src/libPPLIB.a: Src/CMakeFiles/PPLIB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libPPLIB.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libPPLIB.a"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && $(CMAKE_COMMAND) -P CMakeFiles/PPLIB.dir/cmake_clean_target.cmake
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PPLIB.dir/link.txt --verbose=$(VERBOSE)
 

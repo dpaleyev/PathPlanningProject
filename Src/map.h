@@ -40,6 +40,7 @@ class Map
         int  getValue(int i, int j) const;
         int getMapHeight() const;
         int getMapWidth() const;
+        int getAgentsNumber() const;
         double getCellSize() const;
         std::pair<int, int> getStart() const;
         std::pair<int, int> getGoal() const;

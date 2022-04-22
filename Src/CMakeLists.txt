@@ -9,7 +9,7 @@ set(HEADERS         config.h
                     search.h
                     searchresult.h
                     tinyxml2.h
-                    xmllogger.h)
+                    xmllogger.h highLevelSearch.cpp highLevelSearch.h)
 
 set(SOURCES         config.cpp
                     environmentoptions.cpp
@@ -17,11 +17,11 @@ set(SOURCES         config.cpp
                     mission.cpp
                     search.cpp
                     tinyxml2.cpp
-                    xmllogger.cpp)
+                    xmllogger.cpp highLevelSearch.cpp highLevelSearch.h)
 
-add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} main.cpp)
+add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} main.cpp highLevelSearch.cpp highLevelSearch.h TreeNode.cpp TreeNode.h)
 
-add_library(PPLIB ${HEADERS} ${SOURCES})
+add_library(PPLIB ${HEADERS} ${SOURCES} highLevelSearch.cpp highLevelSearch.h)
 
 install(TARGETS ${PROJECT_NAME} 
         CONFIGURATIONS Debug

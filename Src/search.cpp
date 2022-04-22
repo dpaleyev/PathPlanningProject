@@ -16,7 +16,7 @@ Search::~Search() {
 }
 
 
-SearchResult Search::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
+SearchResult Search::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, int agent_id, const std::unordered_map<int, std::vector<std::pair<int, int>>>& constraints)
 {
     auto start_time = std::chrono::system_clock::now();
     sresult.pathfound = false;

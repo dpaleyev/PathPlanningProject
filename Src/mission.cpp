@@ -74,9 +74,10 @@ void Mission::saveSearchResultsToLog()
 {
     logger->writeToLogSummary(sr.numberofsteps, sr.nodescreated, sr.pathlength, sr.time, map.getCellSize());
     if (sr.pathfound) {
-        logger->writeToLogPath(*sr.lppath);
-        logger->writeToLogHPpath(*sr.hppath);
-        logger->writeToLogMap(map, *sr.lppath);
+        //TODO:Change logger
+        //logger->writeToLogPath(*sr.lppath);
+        //logger->writeToLogHPpath(*sr.hppath);
+        //logger->writeToLogMap(map, *sr.lppath);
     } else
         logger->writeToLogNotFound();
     logger->saveLog();

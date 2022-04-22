@@ -199,6 +199,30 @@ Paleyev_Daniel_ASearch/fast:
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build
 .PHONY : Paleyev_Daniel_ASearch/fast
 
+TreeNode.o: TreeNode.cpp.o
+.PHONY : TreeNode.o
+
+# target to build an object file
+TreeNode.cpp.o:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o
+.PHONY : TreeNode.cpp.o
+
+TreeNode.i: TreeNode.cpp.i
+.PHONY : TreeNode.i
+
+# target to preprocess a source file
+TreeNode.cpp.i:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i
+.PHONY : TreeNode.cpp.i
+
+TreeNode.s: TreeNode.cpp.s
+.PHONY : TreeNode.s
+
+# target to generate assembly for a file
+TreeNode.cpp.s:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s
+.PHONY : TreeNode.cpp.s
+
 config.o: config.cpp.o
 .PHONY : config.o
 
@@ -252,6 +276,33 @@ environmentoptions.cpp.s:
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/environmentoptions.cpp.s
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.s
 .PHONY : environmentoptions.cpp.s
+
+highLevelSearch.o: highLevelSearch.cpp.o
+.PHONY : highLevelSearch.o
+
+# target to build an object file
+highLevelSearch.cpp.o:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o
+.PHONY : highLevelSearch.cpp.o
+
+highLevelSearch.i: highLevelSearch.cpp.i
+.PHONY : highLevelSearch.i
+
+# target to preprocess a source file
+highLevelSearch.cpp.i:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.i
+.PHONY : highLevelSearch.cpp.i
+
+highLevelSearch.s: highLevelSearch.cpp.s
+.PHONY : highLevelSearch.s
+
+# target to generate assembly for a file
+highLevelSearch.cpp.s:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/highLevelSearch.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.s
+.PHONY : highLevelSearch.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -427,12 +478,18 @@ help:
 	@echo "... test"
 	@echo "... PPLIB"
 	@echo "... Paleyev_Daniel_ASearch"
+	@echo "... TreeNode.o"
+	@echo "... TreeNode.i"
+	@echo "... TreeNode.s"
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
 	@echo "... environmentoptions.o"
 	@echo "... environmentoptions.i"
 	@echo "... environmentoptions.s"
+	@echo "... highLevelSearch.o"
+	@echo "... highLevelSearch.i"
+	@echo "... highLevelSearch.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
