@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o"
+  "CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o.d"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o.d"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o.d"
+  "CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o"
+  "CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o.d"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o.d"
   "CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o"

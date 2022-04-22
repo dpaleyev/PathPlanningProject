@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/Users/danny.paleyev/PathPlanningProject")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/danny.paleyev/PathPlanningProject/build/Release")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/danny.paleyev/PathPlanningProject/Build/Release")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

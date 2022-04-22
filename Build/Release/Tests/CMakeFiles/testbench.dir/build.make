@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/danny.paleyev/PathPlanningProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/danny.paleyev/PathPlanningProject/build/Release
+CMAKE_BINARY_DIR = /Users/danny.paleyev/PathPlanningProject/Build/Release
 
 # Include any dependencies generated for this target.
 include Tests/CMakeFiles/testbench.dir/depend.make
@@ -72,40 +72,56 @@ include Tests/CMakeFiles/testbench.dir/flags.make
 Tests/CMakeFiles/testbench.dir/testbench.cpp.o: Tests/CMakeFiles/testbench.dir/flags.make
 Tests/CMakeFiles/testbench.dir/testbench.cpp.o: ../../Tests/testbench.cpp
 Tests/CMakeFiles/testbench.dir/testbench.cpp.o: Tests/CMakeFiles/testbench.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/CMakeFiles/testbench.dir/testbench.cpp.o"
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/CMakeFiles/testbench.dir/testbench.cpp.o -MF CMakeFiles/testbench.dir/testbench.cpp.o.d -o CMakeFiles/testbench.dir/testbench.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/Build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/CMakeFiles/testbench.dir/testbench.cpp.o"
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/CMakeFiles/testbench.dir/testbench.cpp.o -MF CMakeFiles/testbench.dir/testbench.cpp.o.d -o CMakeFiles/testbench.dir/testbench.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp
 
 Tests/CMakeFiles/testbench.dir/testbench.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testbench.dir/testbench.cpp.i"
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp > CMakeFiles/testbench.dir/testbench.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp > CMakeFiles/testbench.dir/testbench.cpp.i
 
 Tests/CMakeFiles/testbench.dir/testbench.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testbench.dir/testbench.cpp.s"
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp -o CMakeFiles/testbench.dir/testbench.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp -o CMakeFiles/testbench.dir/testbench.cpp.s
+
+Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o: Tests/CMakeFiles/testbench.dir/flags.make
+Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o: ../../Src/highLevelSearch.cpp
+Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o: Tests/CMakeFiles/testbench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/Build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o"
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o -MF CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o.d -o CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp
+
+Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.i"
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp > CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.i
+
+Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.s"
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp -o CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.s
 
 # Object files for target testbench
 testbench_OBJECTS = \
-"CMakeFiles/testbench.dir/testbench.cpp.o"
+"CMakeFiles/testbench.dir/testbench.cpp.o" \
+"CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o"
 
 # External object files for target testbench
 testbench_EXTERNAL_OBJECTS =
 
 Tests/testbench: Tests/CMakeFiles/testbench.dir/testbench.cpp.o
+Tests/testbench: Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o
 Tests/testbench: Tests/CMakeFiles/testbench.dir/build.make
 Tests/testbench: Src/libPPLIB.a
 Tests/testbench: Tests/CMakeFiles/testbench.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danny.paleyev/PathPlanningProject/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testbench"
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release/Tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testbench.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danny.paleyev/PathPlanningProject/Build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable testbench"
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testbench.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Tests/CMakeFiles/testbench.dir/build: Tests/testbench
 .PHONY : Tests/CMakeFiles/testbench.dir/build
 
 Tests/CMakeFiles/testbench.dir/clean:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release/Tests && $(CMAKE_COMMAND) -P CMakeFiles/testbench.dir/cmake_clean.cmake
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests && $(CMAKE_COMMAND) -P CMakeFiles/testbench.dir/cmake_clean.cmake
 .PHONY : Tests/CMakeFiles/testbench.dir/clean
 
 Tests/CMakeFiles/testbench.dir/depend:
-	cd /Users/danny.paleyev/PathPlanningProject/build/Release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/danny.paleyev/PathPlanningProject /Users/danny.paleyev/PathPlanningProject/Tests /Users/danny.paleyev/PathPlanningProject/build/Release /Users/danny.paleyev/PathPlanningProject/build/Release/Tests /Users/danny.paleyev/PathPlanningProject/build/Release/Tests/CMakeFiles/testbench.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/danny.paleyev/PathPlanningProject/Build/Release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/danny.paleyev/PathPlanningProject /Users/danny.paleyev/PathPlanningProject/Tests /Users/danny.paleyev/PathPlanningProject/Build/Release /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests /Users/danny.paleyev/PathPlanningProject/Build/Release/Tests/CMakeFiles/testbench.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Tests/CMakeFiles/testbench.dir/depend
 

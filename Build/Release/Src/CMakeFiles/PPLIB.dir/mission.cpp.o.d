@@ -231,7 +231,6 @@ Src/CMakeFiles/PPLIB.dir/mission.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__split_buffer \
   /Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.h \
   /Users/danny.paleyev/PathPlanningProject/Src/config.h \
-  /Users/danny.paleyev/PathPlanningProject/Src/search.h \
   /Users/danny.paleyev/PathPlanningProject/Src/ilogger.h \
   /Users/danny.paleyev/PathPlanningProject/Src/node.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/unordered_map \
@@ -244,6 +243,10 @@ Src/CMakeFiles/PPLIB.dir/mission.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/list \
   /Users/danny.paleyev/PathPlanningProject/Src/searchresult.h \
   /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h \
+  /Users/danny.paleyev/PathPlanningProject/Src/search.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tree \
-  /Users/danny.paleyev/PathPlanningProject/Src/xmllogger.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/unordered_set \
+  /Users/danny.paleyev/PathPlanningProject/Src/xmllogger.h \
+  /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.h \
+  /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
