@@ -168,12 +168,12 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/clean:
 Tests/CMakeFiles/testbench.dir/all: Src/CMakeFiles/PPLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=22,23,24 "Built target testbench"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target testbench"
 .PHONY : Tests/CMakeFiles/testbench.dir/all
 
 # Build rule for subdir invocation for target.
 Tests/CMakeFiles/testbench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/CMakeFiles/testbench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles 0
 .PHONY : Tests/CMakeFiles/testbench.dir/rule

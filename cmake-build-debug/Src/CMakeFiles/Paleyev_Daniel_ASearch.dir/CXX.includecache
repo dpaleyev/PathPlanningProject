@@ -9,6 +9,8 @@
 /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp
 TreeNode.h
 /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
+TreeNode.h
+/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
 utility
@@ -30,23 +32,11 @@ ilogger.h
 search.h
 /Users/danny.paleyev/PathPlanningProject/Src/search.h
 
-/Users/danny.paleyev/PathPlanningProject/Src/config.h
-string
--
-
 /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h
 gl_const.h
 /Users/danny.paleyev/PathPlanningProject/Src/gl_const.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/gl_const.h
-
-/Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp
-highLevelSearch.h
-/Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.h
-
-/Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.h
-TreeNode.h
-/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
 map.h
@@ -57,10 +47,6 @@ unordered_map
 -
 list
 -
-
-/Users/danny.paleyev/PathPlanningProject/Src/main.cpp
-mission.h
-/Users/danny.paleyev/PathPlanningProject/Src/mission.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/map.h
 iostream
@@ -80,35 +66,7 @@ utility
 tinyxml2.h
 /Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.h
 
-/Users/danny.paleyev/PathPlanningProject/Src/mission.cpp
-mission.h
-/Users/danny.paleyev/PathPlanningProject/Src/mission.h
-iostream
--
-
-/Users/danny.paleyev/PathPlanningProject/Src/mission.h
-map.h
-/Users/danny.paleyev/PathPlanningProject/Src/map.h
-config.h
-/Users/danny.paleyev/PathPlanningProject/Src/config.h
-ilogger.h
-/Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
-searchresult.h
-/Users/danny.paleyev/PathPlanningProject/Src/searchresult.h
-environmentoptions.h
-/Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h
-search.h
-/Users/danny.paleyev/PathPlanningProject/Src/search.h
-xmllogger.h
-/Users/danny.paleyev/PathPlanningProject/Src/xmllogger.h
-highLevelSearch.h
-/Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.h
-
 /Users/danny.paleyev/PathPlanningProject/Src/node.h
-
-/Users/danny.paleyev/PathPlanningProject/Src/search.cpp
-search.h
-/Users/danny.paleyev/PathPlanningProject/Src/search.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/search.h
 ilogger.h
@@ -171,16 +129,4 @@ android/log.h
 -
 assert.h
 -
-
-/Users/danny.paleyev/PathPlanningProject/Src/xmllogger.cpp
-xmllogger.h
-/Users/danny.paleyev/PathPlanningProject/Src/xmllogger.h
-iostream
--
-
-/Users/danny.paleyev/PathPlanningProject/Src/xmllogger.h
-tinyxml2.h
-/Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.h
-ilogger.h
-/Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
 

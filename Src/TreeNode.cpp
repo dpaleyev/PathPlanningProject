@@ -16,7 +16,7 @@ void TreeNode::findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptio
     for (int agent_id = 0; agent_id < Map.getAgentsNumber(); ++agent_id) {
         Search search;
         SearchResult sr = search.startSearch(Logger, Map, options, agent_id, {});
-        paths.push_back(std::make_shared<std::list<Node>>(*sr.lppath));
+        paths.push_back(std::make_shared<std::list<Node>>(*sr.hppath));
         costs.push_back(sr.pathlength);
         totalCost += sr.pathlength;
     }
@@ -25,7 +25,7 @@ void TreeNode::findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptio
 void TreeNode::updatePath(ILogger *Logger, const Map &Map, const EnvironmentOptions &options, int agent_id) {
     Search search;
     SearchResult sr = search.startSearch(Logger, Map, options, agent_id, constraints[agent_id]);
-    paths[agent_id] = std::make_shared<std::list<Node>>(*sr.lppath);
+    paths[agent_id] = std::make_shared<std::list<Node>>(*sr.hppath);
     totalCost -= costs[agent_id];
     costs[agent_id] = sr.pathlength;
     totalCost += sr.pathlength;
@@ -50,6 +50,8 @@ bool TreeNode::hasConflict(std::vector<int>& res) {
                     res = {i, j, it1->i, it1->j, k};
                     return true;
                 }
+                ++it1;
+                ++it2;
             }
         }
     }

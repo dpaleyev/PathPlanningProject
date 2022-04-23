@@ -73,9 +73,9 @@ void Mission::printSearchResultsToConsole()
 void Mission::saveSearchResultsToLog()
 {
     logger->writeToLogSummary( hsr.totalCost, time, map.getCellSize());
-    if (hsr.totalCost == -1) {
-        logger->writeToLogPath(hsr.paths);
-        //logger->writeToLogHPpath(*sr.hppath);
+    if (hsr.totalCost != -1) {
+        //logger->writeToLogPath(hsr.paths);
+        logger->writeToLogHPpath(hsr.paths);
         //logger->writeToLogMap(map, *sr.lppath);
     } else
         logger->writeToLogNotFound();

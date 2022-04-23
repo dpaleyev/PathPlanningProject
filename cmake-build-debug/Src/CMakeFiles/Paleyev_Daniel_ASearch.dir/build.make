@@ -66,22 +66,9 @@ include Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/progress.make
 # Include the compile flags for this target's objects.
 include Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 
-Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
-Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o: ../Src/TreeNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o"
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp
-
-Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i"
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp > CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i
-
-Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s"
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp -o CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s
-
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o: ../Src/config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/config.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.i: cmake_force
@@ -94,7 +81,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o: ../Src/environmentoptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.i: cmake_force
@@ -107,7 +94,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o: ../Src/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/map.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.i: cmake_force
@@ -120,7 +107,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o: ../Src/mission.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/mission.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.i: cmake_force
@@ -133,7 +120,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/mission.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o: ../Src/search.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/search.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.i: cmake_force
@@ -146,7 +133,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o: ../Src/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.i: cmake_force
@@ -159,7 +146,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o: ../Src/xmllogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/xmllogger.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.i: cmake_force
@@ -172,7 +159,7 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.s: cmake_force
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o: ../Src/highLevelSearch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.i: cmake_force
@@ -182,6 +169,19 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.i: cmake_force
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.s"
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Src/highLevelSearch.cpp -o CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.s
+
+Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
+Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o: ../Src/TreeNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o -c /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp
+
+Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp > CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.i
+
+Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s"
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp -o CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.s
 
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/flags.make
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o: ../Src/main.cpp
@@ -198,7 +198,6 @@ Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.s: cmake_force
 
 # Object files for target Paleyev_Daniel_ASearch
 Paleyev_Daniel_ASearch_OBJECTS = \
-"CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o" \
@@ -207,12 +206,12 @@ Paleyev_Daniel_ASearch_OBJECTS = \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o" \
+"CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o" \
 "CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o"
 
 # External object files for target Paleyev_Daniel_ASearch
 Paleyev_Daniel_ASearch_EXTERNAL_OBJECTS =
 
-Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/config.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/environmentoptions.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/map.cpp.o
@@ -221,6 +220,7 @@ Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/search.cpp
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/tinyxml2.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/xmllogger.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/highLevelSearch.cpp.o
+Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/TreeNode.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/main.cpp.o
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make
 Src/Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/link.txt

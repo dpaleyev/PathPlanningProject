@@ -185,30 +185,6 @@ testbench/fast:
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/build
 .PHONY : testbench/fast
 
-__/Src/highLevelSearch.o: __/Src/highLevelSearch.cpp.o
-.PHONY : __/Src/highLevelSearch.o
-
-# target to build an object file
-__/Src/highLevelSearch.cpp.o:
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.o
-.PHONY : __/Src/highLevelSearch.cpp.o
-
-__/Src/highLevelSearch.i: __/Src/highLevelSearch.cpp.i
-.PHONY : __/Src/highLevelSearch.i
-
-# target to preprocess a source file
-__/Src/highLevelSearch.cpp.i:
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.i
-.PHONY : __/Src/highLevelSearch.cpp.i
-
-__/Src/highLevelSearch.s: __/Src/highLevelSearch.cpp.s
-.PHONY : __/Src/highLevelSearch.s
-
-# target to generate assembly for a file
-__/Src/highLevelSearch.cpp.s:
-	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/__/Src/highLevelSearch.cpp.s
-.PHONY : __/Src/highLevelSearch.cpp.s
-
 testbench.o: testbench.cpp.o
 .PHONY : testbench.o
 
@@ -247,9 +223,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... testbench"
-	@echo "... __/Src/highLevelSearch.o"
-	@echo "... __/Src/highLevelSearch.i"
-	@echo "... __/Src/highLevelSearch.s"
 	@echo "... testbench.o"
 	@echo "... testbench.i"
 	@echo "... testbench.s"

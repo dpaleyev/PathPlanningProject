@@ -6,20 +6,20 @@
         <agentsnumber>2</agentsnumber>
         <cellsize>24</cellsize>
         <startx>
-            <agent>12</agent>
+            <agent>21</agent>
             <agent>3</agent>
         </startx>
         <starty>
-            <agent>20</agent>
-            <agent>3</agent>
+            <agent>22</agent>
+            <agent>22</agent>
         </starty>
         <finishx>
-            <agent>12</agent>
-            <agent>12</agent>
+            <agent>3</agent>
+            <agent>21</agent>
         </finishx>
         <finishy>
-            <agent>7</agent>
-            <agent>12</agent>
+            <agent>22</agent>
+            <agent>22</agent>
         </finishy>
         <grid>
             <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>

@@ -78,7 +78,7 @@ bool Map::getMap(const char *FileName)
         stream.str("");
         stream.clear();
 
-        if(value != CNS_TAG_GRID)
+        if(value != CNS_TAG_GRID && value != CNS_TAG_STX && value != CNS_TAG_STY && value != CNS_TAG_FINX && value != CNS_TAG_FINY)
         {
            stream << element->GetText();
         }
@@ -105,8 +105,13 @@ bool Map::getMap(const char *FileName)
                     std::cout << "Continue reading XML and hope correct value of '" << CNS_TAG_AGENTSN
                               << "' tag will be encountered later..." << std::endl;
                 }
-                else
+                else {
                     hasAgentsNumber = true;
+                    start_i.resize(agents_n);
+                    start_j.resize(agents_n);
+                    goal_i.resize(agents_n);
+                    goal_j.resize(agents_n);
+                }
             }
         }
         else if (value == CNS_TAG_HEIGHT) {
@@ -192,9 +197,10 @@ bool Map::getMap(const char *FileName)
                                   << "' tag which is " << agents_n << std::endl;
                         return false;
                     }
-                    stream << element->GetText();
+                    std::string str = element->GetText();
+                    std::stringstream ss(str);
 
-                    if (!(stream >> start_j[start_j_it] && start_j[start_j_it] >= 0 && start_j[start_j_it] < width)) {
+                    if (!(ss >> start_j[start_j_it] && start_j[start_j_it] >= 0 && start_j[start_j_it] < width)) {
                         std::cout << "Warning! Invalid value of '" << CNS_TAG_STX
                                   << "' tag encountered (or could not convert to integer)" << std::endl;
                         std::cout << "Value of '" << CNS_TAG_STX << "' tag should be an integer AND >=0 AND < '"
@@ -237,9 +243,10 @@ bool Map::getMap(const char *FileName)
                                   << "' tag which is " << agents_n << std::endl;
                         return false;
                     }
-                    stream << element->GetText();
+                    std::string str = element->GetText();
+                    std::stringstream ss(str);
 
-                    if (!(stream >> start_i[start_i_it] && start_i[start_i_it] >= 0 && start_i[start_i_it] < height)) {
+                    if (!(ss >> start_i[start_i_it] && start_i[start_i_it] >= 0 && start_i[start_i_it] < height)) {
                         std::cout << "Warning! Invalid value of '" << CNS_TAG_STY
                                   << "' tag encountered (or could not convert to integer)" << std::endl;
                         std::cout << "Value of '" << CNS_TAG_STY << "' tag should be an integer AND >=0 AND < '"
@@ -283,9 +290,10 @@ bool Map::getMap(const char *FileName)
                                   << "' tag which is " << agents_n << std::endl;
                         return false;
                     }
-                    stream << element->GetText();
+                    std::string str = element->GetText();
+                    std::stringstream ss(str);
 
-                    if (!(stream >> goal_j[goal_j_it] && goal_j[goal_j_it] >= 0 && goal_j[goal_j_it] < width)) {
+                    if (!(ss >> goal_j[goal_j_it] && goal_j[goal_j_it] >= 0 && goal_j[goal_j_it] < width)) {
                         std::cout << "Warning! Invalid value of '" << CNS_TAG_FINX
                                   << "' tag encountered (or could not convert to integer)" << std::endl;
                         std::cout << "Value of '" << CNS_TAG_FINX << "' tag should be an integer AND >=0 AND < '"
@@ -329,9 +337,10 @@ bool Map::getMap(const char *FileName)
                                   << "' tag which is " << agents_n << std::endl;
                         return false;
                     }
-                    stream << element->GetText();
+                    std::string str = element->GetText();
+                    std::stringstream ss(str);
 
-                    if (!(stream >> goal_i[goal_i_it] && goal_i[goal_i_it] >= 0 && goal_i[goal_i_it] < height)) {
+                    if (!(ss >> goal_i[goal_i_it] && goal_i[goal_i_it] >= 0 && goal_i[goal_i_it] < height)) {
                         std::cout << "Warning! Invalid value of '" << CNS_TAG_FINY
                                   << "' tag encountered (or could not convert to integer)" << std::endl;
                         std::cout << "Value of '" << CNS_TAG_FINY << "' tag should be an integer AND >=0 AND < '"
@@ -410,7 +419,7 @@ bool Map::getMap(const char *FileName)
         }
 
         if (Grid[goal_i[i]][goal_j[i]] != CN_GC_NOOBS) {
-            std::cout << "Error! Goal cell" << start_j[i] << ' ' << start_i[i] << "is not traversable (cell's value is" << Grid[start_i[i]][start_j[i]] << ")!"
+            std::cout << "Error! Goal cell" << goal_j[i] << ' ' << goal_i[i] << "is not traversable (cell's value is" << Grid[start_i[i]][start_j[i]] << ")!"
                       << std::endl;
             return false;
         }
