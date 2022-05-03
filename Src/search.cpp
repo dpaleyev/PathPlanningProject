@@ -43,9 +43,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                         continue;
                     }
                 }
-                if (d_i == 0 && d_j == 0) {
-                    continue;
-                }
+
                 if (!map.CellOnGrid(s->i + d_i, s->j + d_j)) {
                     continue;
                 }
@@ -64,7 +62,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                         continue;
                     }
                 }
-                double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
+                double d_dist = 1;
                 if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
                     CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
                     Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->g + d_dist + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
