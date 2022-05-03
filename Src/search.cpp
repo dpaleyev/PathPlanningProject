@@ -51,7 +51,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                     continue;
                 }
 
-                if (abs(d_i) == abs(d_j)) {
+                if (abs(d_i) == 1 && abs(d_j) == 1) {
                     if (!options.allowdiagonal) {
                         continue;
                     }
@@ -62,10 +62,13 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                         continue;
                     }
                 }
-                double d_dist = 1;
-                if (OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
-                    CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) {
-                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->g + d_dist + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
+                double d_dist = abs(d_i) == abs(d_j) ? CN_SQRT_TWO  : 1;
+                if (abs(d_i) == abs(d_j) && abs(d_j) == 0) {
+                    d_dist = 0;
+                }
+                if ((OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
+                    CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) || (d_i == 0 && d_j == 0)) {
+                    Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->step + 1 + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
                     OPEN_order.insert(s_new);
                     OPEN_find.insert({{s_new->i, s_new->j}, s_new});
                 } else {
