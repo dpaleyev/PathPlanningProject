@@ -14,7 +14,7 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
         TreeNode P = *bestIt;
         OPEN.erase(bestIt);
 
-        std::vector<int> conflict;
+        std::vector<Constraint> conflict;
         if (!P.hasConflict(conflict)) {
             HighLevelResults hsr;
             hsr.paths = P.getPaths();
@@ -22,12 +22,8 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             return hsr;
         }
         for (int i = 0; i < 2; ++i) {
-            Constraint constraint;
-            constraint.id = conflict[i];
-            constraint.time = conflict[4];
-            constraint.cell = {conflict[2], conflict[3]};
-            TreeNode A(P, constraint);
-            A.updatePath(Logger, Map, options, conflict[i]);
+            TreeNode A(P, conflict[i]);
+            A.updatePath(Logger, Map, options, conflict[i].id);
             OPEN.push_back(A);
         }
     }

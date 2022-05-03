@@ -3,11 +3,6 @@
 //
 
 #include "TreeNode.h"
-//
-// Created by Даниил Палеев on 22.04.2022.
-//
-
-#include "TreeNode.h"
 
 void TreeNode::findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptions &options) {
     paths = {};
@@ -39,19 +34,43 @@ std::vector<std::list<Node>> TreeNode::getPaths() {
     return result;
 }
 
-bool TreeNode::hasConflict(std::vector<int>& res) {
+bool TreeNode::hasConflict(std::vector<Constraint>& res) {
     for (int i = 0; i < paths.size(); i++) {
         for (int j = i + 1; j < paths.size(); j++) {
             auto min_index = std::min(paths[i]->size(), paths[j]->size());
             auto it1 = paths[i]->begin();
             auto it2 = paths[j]->begin();
-            for (int k = 0; k < min_index; k++) {
+            for (int k = 0; k < std::max(paths[i]->size(), paths[j]->size()); k++) {
                 if (it1->i == it2->i && it1->j == it2->j) {
-                    res = {i, j, it1->i, it1->j, k};
+                    res.push_back({i, k, {it1->i, it1->j}});
+                    res.push_back({j, k, {it1->i, it1->j}});
                     return true;
                 }
-                ++it1;
-                ++it2;
+                if (k != 0) {
+                    auto pr1 = it1;
+                    if (k < paths[i]->size()) {
+                        pr1 = prev(it1);
+                    }
+                    auto pr2 = it2;
+                    if (k < paths[j]->size()) {
+                        pr2 = prev(it2);
+                    }
+                    auto pr_c1 = *pr1;
+                    auto pr_c2 = *pr2;
+                    auto it_c1 = *it1;
+                    auto it_c2 = *it2;
+                    if (it1->i == pr2->i && it1->j == pr2->j && pr1->i == it2->i && pr1->j == it2->j) {
+                        res.push_back({i, k, {it1->i, it1->j}});
+                        res.push_back({j, k, {it2->i, it2->j}});
+                        return true;
+                    }
+                }
+                if (k < paths[i]->size()) {
+                    ++it1;
+                }
+                if (k < paths[j]->size()) {
+                    ++it2;
+                }
             }
         }
     }

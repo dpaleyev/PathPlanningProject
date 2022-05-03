@@ -6,7 +6,7 @@
         <agentsnumber>2</agentsnumber>
         <cellsize>24</cellsize>
         <startx>
-            <agent>21</agent>
+            <agent>22</agent>
             <agent>3</agent>
         </startx>
         <starty>
@@ -15,7 +15,7 @@
         </starty>
         <finishx>
             <agent>3</agent>
-            <agent>21</agent>
+            <agent>22</agent>
         </finishx>
         <finishy>
             <agent>22</agent>
@@ -54,9 +54,9 @@
         <metrictype>diagonal</metrictype>
         <breakingties>g-max</breakingties>
         <hweight>1</hweight>
-        <allowdiagonal>true</allowdiagonal>
-        <cutcorners>true</cutcorners>
-        <allowsqueeze>true</allowsqueeze>
+        <allowdiagonal>false</allowdiagonal>
+        <cutcorners>false</cutcorners>
+        <allowsqueeze>false</allowsqueeze>
     </algorithm>
     <options>
         <loglevel>1</loglevel>
