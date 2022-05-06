@@ -13,30 +13,6 @@
 #include <utility>
 #include <unordered_set>
 
-struct pair_hash {
-    inline std::size_t operator()(const std::pair<int,int> & v) const {
-        return v.first*1000000+v.second;
-    }
-};
-
-struct Comparator {
-    bool operator() (const Node* a, const Node* b) const {
-        if (a->F == b->F) {
-            if (a->i == b->i) {
-                return a->j < b->j;
-            }
-            return a->i < b->i;
-        }
-        return a->F < b->F;
-    }
-};
-
-struct PairHash {
-    std::size_t operator()(const std::pair<int, int> &x) const {
-        return std::hash<int>()(x.first) ^ std::hash<int>()(x.second);
-    }
-};
-
 class Search
 {
     public:
@@ -61,7 +37,7 @@ class Search
         //and only then begin enhancement!
 
         std::set<Node*, Comparator> OPEN_order;
-        std::unordered_map<std::pair<int, int>, Node*, PairHash> CLOSED, OPEN_find;
+        std::unordered_map<std::pair<int, int>, Node*, pair_hash> CLOSED, OPEN_find;
         SearchResult                    sresult; //This will store the search result
         std::list<Node>                 lppath, hppath; //
 

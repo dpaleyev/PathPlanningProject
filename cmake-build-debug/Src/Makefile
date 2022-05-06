@@ -199,6 +199,33 @@ Paleyev_Daniel_ASearch/fast:
 	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build
 .PHONY : Paleyev_Daniel_ASearch/fast
 
+MDD.o: MDD.cpp.o
+.PHONY : MDD.o
+
+# target to build an object file
+MDD.cpp.o:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/MDD.cpp.o
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/MDD.cpp.o
+.PHONY : MDD.cpp.o
+
+MDD.i: MDD.cpp.i
+.PHONY : MDD.i
+
+# target to preprocess a source file
+MDD.cpp.i:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/MDD.cpp.i
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/MDD.cpp.i
+.PHONY : MDD.cpp.i
+
+MDD.s: MDD.cpp.s
+.PHONY : MDD.s
+
+# target to generate assembly for a file
+MDD.cpp.s:
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/PPLIB.dir/build.make Src/CMakeFiles/PPLIB.dir/MDD.cpp.s
+	cd /Users/danny.paleyev/PathPlanningProject/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/MDD.cpp.s
+.PHONY : MDD.cpp.s
+
 TreeNode.o: TreeNode.cpp.o
 .PHONY : TreeNode.o
 
@@ -481,6 +508,9 @@ help:
 	@echo "... test"
 	@echo "... PPLIB"
 	@echo "... Paleyev_Daniel_ASearch"
+	@echo "... MDD.o"
+	@echo "... MDD.i"
+	@echo "... MDD.s"
 	@echo "... TreeNode.o"
 	@echo "... TreeNode.i"
 	@echo "... TreeNode.s"

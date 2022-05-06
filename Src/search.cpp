@@ -90,7 +90,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
         }
     }
     if (sresult.pathfound) {
-        sresult.pathlength = head->g;
+        sresult.pathlength = head->step;
         makePrimaryPath(*head);
         makeSecondaryPath();
     }
@@ -114,7 +114,6 @@ void Search::makePrimaryPath(Node curNode)
     }
     hppath.reverse();
 }
-
 void Search::makeSecondaryPath()
 {
     if (lppath.empty()) {

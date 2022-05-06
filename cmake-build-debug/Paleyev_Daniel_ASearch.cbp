@@ -216,6 +216,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Src/MDD.cpp">
+			<Option target="PPLIB"/>
+			<Option target="Paleyev_Daniel_ASearch"/>
+		</Unit>
+		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Src/MDD.h">
+			<Option target="PPLIB"/>
+			<Option target="Paleyev_Daniel_ASearch"/>
+		</Unit>
 		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp">
 			<Option target="PPLIB"/>
 			<Option target="Paleyev_Daniel_ASearch"/>

@@ -11,7 +11,7 @@ set(HEADERS         config.h
                     tinyxml2.h
                     xmllogger.h
                     highLevelSearch.h
-                    TreeNode.h)
+                    TreeNode.h MDD.cpp MDD.h)
 
 set(SOURCES         config.cpp
                     environmentoptions.cpp
@@ -21,7 +21,7 @@ set(SOURCES         config.cpp
                     tinyxml2.cpp
                     xmllogger.cpp
                     highLevelSearch.cpp
-                    TreeNode.cpp)
+                    TreeNode.cpp MDD.cpp MDD.h)
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} main.cpp)
 

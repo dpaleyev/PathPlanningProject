@@ -13,4 +13,23 @@ struct Node
 
 };
 
+struct pair_hash {
+    inline std::size_t operator()(const std::pair<int,int> & v) const {
+        return v.first*1000000+v.second;
+    }
+};
+
+struct Comparator {
+    bool operator() (const Node* a, const Node* b) const {
+        if (a->F == b->F) {
+            if (a->i == b->i) {
+                return a->j < b->j;
+            }
+            return a->i < b->i;
+        }
+        return a->F < b->F;
+    }
+
+};
+
 #endif
