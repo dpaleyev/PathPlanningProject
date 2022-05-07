@@ -65,7 +65,7 @@
     </options>
     <log>
         <mapfilename>example.xml</mapfilename>
-        <summary length="10" length_scaled="240" time="426.000000"/>
+        <summary length="11" length_scaled="264" time="851.000000"/>
         <path/>
         <lplevel/>
         <hplevel>

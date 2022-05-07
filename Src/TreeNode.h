@@ -37,6 +37,7 @@ public:
     void findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
     void updatePath(ILogger *Logger, const Map &Map, const EnvironmentOptions &options, int agent_id);
     bool hasConflict(std::vector<Constraint>& res);
+    int countConflicts();
     std::vector<std::list<Node>> getPaths();
 
 };

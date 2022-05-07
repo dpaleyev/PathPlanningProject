@@ -4,6 +4,7 @@
 
 #include "MDD.h"
 #include <set>
+#include <unordered_set>
 
 MDD::MDD(const Map &map, const EnvironmentOptions &options, int id, int c) {
     cost = c;
@@ -28,10 +29,10 @@ std::unordered_map<std::pair<int, int>, int, pair_hash>
 MDD::bfs(const Map &map, const EnvironmentOptions &options, std::pair<int, int> start) {
     std::unordered_map<std::pair<int, int>, int, pair_hash> result;
     std::set<Node*, Comparator> order;
-    std::set<std::pair<int, int>, pair_hash> used;
+    std::unordered_set<std::pair<int, int>, pair_hash> used;
     Node* start_node = new Node {start.first, start.second, 0, 0, 0, 0, nullptr};
     order.insert(start_node);
-    used.insert({start_node->i, start_node->j});
+    used.insert(std::make_pair(start_node->i, start_node->j));
 
     while(!order.empty()) {
         Node* s = *order.begin();
@@ -69,13 +70,13 @@ MDD::bfs(const Map &map, const EnvironmentOptions &options, std::pair<int, int> 
                         Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, static_cast<double>(s->step + 1), 0,
                                                0, s};
                         order.insert(s_new);
-                        used.insert({s_new->i, s_new->j});
+                        used.insert(std::make_pair(s_new->i, s_new->j));
                     }
                 }
             }
         }
-        return result;
     }
+    return result;
 }
 
 bool MDD::isCardinal(int step) {

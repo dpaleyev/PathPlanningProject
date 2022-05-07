@@ -1,6 +1,8 @@
 #ifndef NODE_H
 #define NODE_H
 
+#include <utility>
+
 //That's the data structure for storing a single search node.
 //You MUST store all the intermediate computations occuring during the search
 //incapsulated to Nodes (so NO separate arrays of g-values etc.)
@@ -14,8 +16,8 @@ struct Node
 };
 
 struct pair_hash {
-    inline std::size_t operator()(const std::pair<int,int> & v) const {
-        return v.first*1000000+v.second;
+    std::size_t operator()(const std::pair<int, int> &x) const {
+        return std::hash<int>()(x.first) ^ std::hash<int>()(x.second);
     }
 };
 

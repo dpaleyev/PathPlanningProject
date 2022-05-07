@@ -20,7 +20,7 @@ class MDD {
     bfs(const Map &map, const EnvironmentOptions &options, std::pair<int, int> start);
 
 public:
-
+    MDD() = default;
     MDD(const Map &map, const EnvironmentOptions &options, int id, int c);
     bool isCardinal(int step);
 };
