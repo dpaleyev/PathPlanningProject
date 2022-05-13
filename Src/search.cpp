@@ -23,14 +23,14 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     auto [start_i, start_j] = map.getStart(agent_id);
     Node* start = new Node {start_i, start_j, 0, getHeuristic(start_i, start_j, options, map, agent_id), 0, getHeuristic(start_i, start_j, options, map, agent_id), nullptr};
     OPEN_order.insert(start);
-    OPEN_find.insert({{start->i, start->j}, start});
+    OPEN_find.insert({{start->i, start->j, 0}, start});
 
     Node* head = nullptr;
     while (!OPEN_order.empty()) {
         Node* s = *OPEN_order.begin();
         OPEN_order.erase(OPEN_order.begin());
-        OPEN_find.erase({s->i, s->j});
-        CLOSED.insert({{s->i, s->j}, s});
+        OPEN_find.erase({s->i, s->j, s->step});
+        CLOSED.insert({{s->i, s->j, s->step}, s});
         if (std::make_pair(s->i, s->j) == map.getGoal(agent_id)) {
             sresult.pathfound = true;
             head = s;
@@ -66,14 +66,14 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                 if (abs(d_i) == abs(d_j) && abs(d_j) == 0) {
                     d_dist = 0;
                 }
-                if ((OPEN_find.find({s->i + d_i, s->j + d_j}) == OPEN_find.end() &&
-                    CLOSED.find({s->i + d_i, s->j + d_j}) == CLOSED.end()) || (d_i == 0 && d_j == 0)) {
+                if ((OPEN_find.find({s->i + d_i, s->j + d_j, s->step + 1}) == OPEN_find.end() &&
+                    CLOSED.find({s->i + d_i, s->j + d_j, s->step + 1}) == CLOSED.end()) || (d_i == 0 && d_j == 0)) {
                     Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->step + 1 + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
                     OPEN_order.insert(s_new);
-                    OPEN_find.insert({{s_new->i, s_new->j}, s_new});
+                    OPEN_find.insert({{s_new->i, s_new->j, s_new->step}, s_new});
                 } else {
-                    if (OPEN_find.find({s->i + d_i, s->j + d_j}) != OPEN_find.end()) {
-                        Node *s_new = OPEN_find[{s->i + d_i, s->j + d_j}];
+                    if (OPEN_find.find({s->i + d_i, s->j + d_j, s->step + 1}) != OPEN_find.end()) {
+                        Node *s_new = OPEN_find[{s->i + d_i, s->j + d_j, s->step + 1}];
                         if (s->g + d_dist < s_new->g) {
                             s_new->g = s->g + d_dist;
                             s_new->F = s_new->g + s_new->H;

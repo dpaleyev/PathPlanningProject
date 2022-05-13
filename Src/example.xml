@@ -6,25 +6,25 @@
         <agentsnumber>2</agentsnumber>
         <cellsize>24</cellsize>
         <startx>
-            <agent>1</agent>
             <agent>0</agent>
+            <agent>3</agent>
         </startx>
         <starty>
+            <agent>2</agent>
             <agent>0</agent>
-            <agent>1</agent>
         </starty>
         <finishx>
-            <agent>2</agent>
             <agent>3</agent>
+            <agent>0</agent>
         </finishx>
         <finishy>
-            <agent>2</agent>
-            <agent>1</agent>
+            <agent>0</agent>
+            <agent>0</agent>
         </finishy>
         <grid>
+            <row>0 1 1 0</row>
             <row>0 0 0 0</row>
-            <row>0 0 0 0</row>
-            <row>0 0 0 0</row>
+            <row>0 1 1 0</row>
         </grid>
     </map>
     <algorithm>

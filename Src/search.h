@@ -37,7 +37,7 @@ class Search
         //and only then begin enhancement!
 
         std::set<Node*, Comparator> OPEN_order;
-        std::unordered_map<std::pair<int, int>, Node*, pair_hash> CLOSED, OPEN_find;
+        std::unordered_map<Cordinates, Node*, cord_hash> CLOSED, OPEN_find;
         SearchResult                    sresult; //This will store the search result
         std::list<Node>                 lppath, hppath; //
 

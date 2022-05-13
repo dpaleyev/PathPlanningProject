@@ -15,9 +15,23 @@ struct Node
 
 };
 
+struct Cordinates {
+    int x, y, step;
+
+    bool operator==(const Cordinates &p) const {
+        return x == p.x && y == p.y && step == p.step;
+    }
+};
+
 struct pair_hash {
     std::size_t operator()(const std::pair<int, int> &x) const {
         return std::hash<int>()(x.first) ^ std::hash<int>()(x.second);
+    }
+};
+
+struct cord_hash {
+    std::size_t operator()(const Cordinates &cord) const {
+        return std::hash<int>()(cord.x) ^ std::hash<int>()(cord.y) ^ std::hash<int>()(cord.step);
     }
 };
 
