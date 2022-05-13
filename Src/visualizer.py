@@ -28,7 +28,7 @@ def data_parser(filename):
             it += 1
         paths.append(path)
 
-    grid = Grid(int(root.find(".//height").text), int(root.find(".//width").text), WIDTH)
+    grid = Grid(int(root.find(".//width").text), int(root.find(".//height").text), WIDTH)
 
     count_i = 0
     for row in root.find(".//grid"):

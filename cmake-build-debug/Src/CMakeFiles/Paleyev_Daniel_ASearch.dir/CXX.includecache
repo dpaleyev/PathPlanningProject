@@ -6,29 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/Users/danny.paleyev/PathPlanningProject/Src/MDD.cpp
-MDD.h
-/Users/danny.paleyev/PathPlanningProject/Src/MDD.h
-set
--
-unordered_set
--
+/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.cpp
+TreeNode.h
+/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
 
-/Users/danny.paleyev/PathPlanningProject/Src/MDD.h
+/Users/danny.paleyev/PathPlanningProject/Src/TreeNode.h
+utility
+-
+vector
+-
+list
+-
+memory
+-
 node.h
 /Users/danny.paleyev/PathPlanningProject/Src/node.h
 map.h
 /Users/danny.paleyev/PathPlanningProject/Src/map.h
 environmentoptions.h
 /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h
-unordered_map
--
+ilogger.h
+/Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
+search.h
+/Users/danny.paleyev/PathPlanningProject/Src/search.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h
 gl_const.h
 /Users/danny.paleyev/PathPlanningProject/Src/gl_const.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/gl_const.h
+
+/Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
+map.h
+/Users/danny.paleyev/PathPlanningProject/Src/map.h
+node.h
+/Users/danny.paleyev/PathPlanningProject/Src/node.h
+unordered_map
+-
+list
+-
 
 /Users/danny.paleyev/PathPlanningProject/Src/map.h
 iostream
@@ -51,6 +67,38 @@ tinyxml2.h
 /Users/danny.paleyev/PathPlanningProject/Src/node.h
 utility
 -
+
+/Users/danny.paleyev/PathPlanningProject/Src/search.h
+ilogger.h
+/Users/danny.paleyev/PathPlanningProject/Src/ilogger.h
+searchresult.h
+/Users/danny.paleyev/PathPlanningProject/Src/searchresult.h
+environmentoptions.h
+/Users/danny.paleyev/PathPlanningProject/Src/environmentoptions.h
+list
+-
+vector
+-
+math.h
+-
+limits
+-
+chrono
+-
+set
+-
+unordered_map
+-
+utility
+-
+unordered_set
+-
+
+/Users/danny.paleyev/PathPlanningProject/Src/searchresult.h
+list
+-
+node.h
+/Users/danny.paleyev/PathPlanningProject/Src/node.h
 
 /Users/danny.paleyev/PathPlanningProject/Src/tinyxml2.h
 ctype.h

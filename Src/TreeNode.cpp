@@ -41,6 +41,8 @@ bool TreeNode::hasConflict(std::vector<Constraint>& res) {
             auto it1 = paths[i]->begin();
             auto it2 = paths[j]->begin();
             for (int k = 0; k < std::max(paths[i]->size(), paths[j]->size()); k++) {
+                auto a = *it1;
+                auto b = *it2;
                 if (it1->i == it2->i && it1->j == it2->j) {
                     if (k < paths[i]->size()) {
                         res.push_back({i, k, {it1->i, it1->j}});

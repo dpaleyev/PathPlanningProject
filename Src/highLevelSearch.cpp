@@ -57,6 +57,7 @@ bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constrain
             for (size_t k = 0; k < std::max(node.paths[i]->size(), node.paths[j]->size()); k++) {
                 if (it1->i == it2->i && it1->j == it2->j) {
                     if (isCardinal(i, node.costs[i], k, Map, options) || isCardinal(j, node.costs[j], k, Map, options)) {
+                        res = {};
                         if (k < node.paths[i]->size()) {
                             res.push_back({i, (int)k, {it1->i, it1->j}});
                         }
@@ -77,6 +78,7 @@ bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constrain
                     }
                     if (it1->i == pr2->i && it1->j == pr2->j && pr1->i == it2->i && pr1->j == it2->j) {
                         if (isCardinal(i, node.costs[i], k, Map, options) || isCardinal(j, node.costs[j], k, Map, options)) {
+                            res = {};
                             res.push_back({i, (int)k, {it1->i, it1->j}});
                             res.push_back({j, (int)k, {it2->i, it2->j}});
                             return true;
@@ -121,4 +123,5 @@ bool HighLevelSearch::findBypass(TreeNode &node, std::vector<Constraint> &confli
             return true;
         }
     }
+    return false;
 }
