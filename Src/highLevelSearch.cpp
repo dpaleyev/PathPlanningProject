@@ -30,20 +30,19 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             }
         }
 
-        if (Map.CellIsIntoCorridor(conflict[0].cell.first, conflict[0].cell.second)){
+        if (Map.CellIsIntoCorridor(conflict[0].cell.first, conflict[0].cell.second)){ //TODO:Parse corridor reasoning
             for (int i_id = 0; i_id < 2; ++i_id) {
-                id
-                auto it1 = P.paths[conflict[0].id]->begin();
-                std::pair<int, int> input_node1;
+                auto it = P.paths[conflict[i_id].id]->begin();
+                std::pair<int, int> input_node;
                 int from_start = 0;
 
-                for (;it1 != P.paths[conflict[0].id]->end(); it1++) {
-                    if (std::make_pair(it1->i, it1->j) == conflict[0].cell) {
+                for (;it != P.paths[conflict[i_id].id]->end(); it++) {
+                    if (std::make_pair(it->i, it->j) == conflict[i_id].cell) {
                         break;
                     }
-                    if (Map.CellIsIntoCorridor(it1->i, it1->j)) {
+                    if (Map.CellIsIntoCorridor(it->i, it->j)) {
                         if (from_start == 0) {
-                            input_node1 = {it1->i, it1->j};
+                            input_node = {it->i, it->j};
                         }
                         from_start++;
                     } else {
@@ -52,14 +51,13 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
                 }
                 std::vector<Constraint> constr;
                 for (int i = 0; i <= conflict[0].time + from_start; ++i) {
-                    constr.push_back({id, i, input_node1});
+                    constr.push_back({conflict[i_id].id, i, input_node});
                 }
                 TreeNode A(P, constr);
-                A.updatePath(Logger, Map, options, id);
+                A.updatePath(Logger, Map, options, conflict[i_id].id);
                 OPEN.push_back(A);
             }
-
-
+            continue;
         }
 
         for (int i = 0; i < 2; ++i) {
@@ -154,7 +152,7 @@ bool HighLevelSearch::isCardinal(int id, int cost, int depth, const Map &Map, co
 
 bool HighLevelSearch::findBypass(TreeNode &node, std::vector<Constraint> &conflict, ILogger *Logger, const Map &Map, const EnvironmentOptions &options) {
     for (int i = 0; i < 2; ++i) {
-        TreeNode A(node, conflict[i]);
+        TreeNode A(node, {conflict[i]});
         A.updatePath(Logger, Map, options, conflict[i].id);
         if (A.totalCost == node.totalCost && A.countConflicts() < node.countConflicts()) {
             node.paths = A.paths;

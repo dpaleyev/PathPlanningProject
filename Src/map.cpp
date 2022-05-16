@@ -475,7 +475,7 @@ bool Map::CellIsIntoCorridor(int i, int j) const {
     std::vector<int> d_i = {1, 0, -1, 0}, d_j = {0, 1, 0, -1};
     int count = 0;
     for (int it = 0; it < 4; ++it) {
-        if (CellIsTraversable(i + d_i[it], j + d_j[it])) {
+        if (CellOnGrid(i + d_i[it], j + d_j[it]) && CellIsTraversable(i + d_i[it], j + d_j[it])) {
             count++;
         }
     }

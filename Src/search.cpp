@@ -67,7 +67,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
                     d_dist = 0;
                 }
                 if ((OPEN_find.find({s->i + d_i, s->j + d_j, s->step + 1}) == OPEN_find.end() &&
-                    CLOSED.find({s->i + d_i, s->j + d_j, s->step + 1}) == CLOSED.end()) || (d_i == 0 && d_j == 0)) {
+                    CLOSED.find({s->i + d_i, s->j + d_j, s->step + 1}) == CLOSED.end())) {
                     Node *s_new = new Node{s->i + d_i, s->j + d_j, s->step + 1, s->step + 1 + getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s->g + d_dist, getHeuristic(s->i + d_i, s->j + d_j, options, map, agent_id), s};
                     OPEN_order.insert(s_new);
                     OPEN_find.insert({{s_new->i, s_new->j, s_new->step}, s_new});
