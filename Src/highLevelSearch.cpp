@@ -60,6 +60,37 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             continue;
         }
 
+        if (conflict[0].cell == conflict[1].cell) { //TODO: parse params
+            for (int i = 0; i < 2; ++i) {
+                if (conflict[0].cell == Map.getGoal(conflict[i].id)) {
+                    int time = 0;
+
+                    for (auto it = P.paths[conflict[1 - i].id]->begin(); it != P.paths[conflict[1 - i].id]->end(); it++) {
+                        if (std::make_pair(it->i, it->j) == conflict[0].cell) {
+                            break;
+                        }
+                        time++;
+                    }
+
+                    if (time < P.paths[conflict[i].id]->size()) {
+                        TreeNode A(P, {{conflict[i].id, time, conflict[i].cell}});
+                        A.updatePath(Logger, Map, options, conflict[i].id);
+                        OPEN.push_back(A);
+                    } else {
+                        std::vector<Constraint> constr;
+                        for (int d_time = 0; d_time <= 20; ++d_time) {
+                            constr.push_back({conflict[1 - i].id, time + d_time, conflict[i].cell});
+                        }
+                        TreeNode A(P, constr);
+                        A.updatePath(Logger, Map, options, conflict[1 - i].id);
+                        OPEN.push_back(A);
+                    }
+                    continue;
+                }
+            }
+        }
+
+
         for (int i = 0; i < 2; ++i) {
             TreeNode A(P, {conflict[i]});
             A.updatePath(Logger, Map, options, conflict[i].id);
