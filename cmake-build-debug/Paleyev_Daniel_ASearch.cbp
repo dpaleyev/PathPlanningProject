@@ -5,7 +5,7 @@
 		<Option title="Paleyev_Daniel_ASearch"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Src\;CMake Files\Tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/danny.paleyev/PathPlanningProject/cmake-build-debug"/>
@@ -171,50 +171,6 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="testbench">
-				<Option output="/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/testbench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/danny.paleyev/PathPlanningProject/Tests/../Src"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 testbench"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testbench/fast">
-				<Option output="/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/testbench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/danny.paleyev/PathPlanningProject/Tests/../Src"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 testbench/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/Tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 		</Build>
 		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Src/MDD.cpp">
 			<Option target="PPLIB"/>
@@ -315,17 +271,11 @@
 			<Option target="PPLIB"/>
 			<Option target="Paleyev_Daniel_ASearch"/>
 		</Unit>
-		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Tests/testbench.cpp">
-			<Option target="testbench"/>
-		</Unit>
 		<Unit filename="/Users/danny.paleyev/PathPlanningProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Src\"/>
-		</Unit>
-		<Unit filename="/Users/danny.paleyev/PathPlanningProject/Tests/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

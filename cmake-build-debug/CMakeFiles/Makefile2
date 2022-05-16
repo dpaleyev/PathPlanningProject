@@ -64,17 +64,14 @@ CMAKE_BINARY_DIR = /Users/danny.paleyev/PathPlanningProject/cmake-build-debug
 
 # The main recursive "all" target.
 all: Src/all
-all: Tests/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: Src/preinstall
-preinstall: Tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: Src/clean
-clean: Tests/clean
 .PHONY : clean
 
 #=============================================================================
@@ -93,21 +90,6 @@ Src/preinstall:
 Src/clean: Src/CMakeFiles/PPLIB.dir/clean
 Src/clean: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/clean
 .PHONY : Src/clean
-
-#=============================================================================
-# Directory level rules for directory Tests
-
-# Recursive "all" directory target.
-Tests/all: Tests/CMakeFiles/testbench.dir/all
-.PHONY : Tests/all
-
-# Recursive "preinstall" directory target.
-Tests/preinstall:
-.PHONY : Tests/preinstall
-
-# Recursive "clean" directory target.
-Tests/clean: Tests/CMakeFiles/testbench.dir/clean
-.PHONY : Tests/clean
 
 #=============================================================================
 # Target rules for target Src/CMakeFiles/PPLIB.dir
@@ -160,32 +142,6 @@ Paleyev_Daniel_ASearch: Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/rule
 Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/clean:
 	$(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/clean
 .PHONY : Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/clean
-
-#=============================================================================
-# Target rules for target Tests/CMakeFiles/testbench.dir
-
-# All Build rule for target.
-Tests/CMakeFiles/testbench.dir/all: Src/CMakeFiles/PPLIB.dir/all
-	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/depend
-	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target testbench"
-.PHONY : Tests/CMakeFiles/testbench.dir/all
-
-# Build rule for subdir invocation for target.
-Tests/CMakeFiles/testbench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/CMakeFiles/testbench.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/danny.paleyev/PathPlanningProject/cmake-build-debug/CMakeFiles 0
-.PHONY : Tests/CMakeFiles/testbench.dir/rule
-
-# Convenience name for target.
-testbench: Tests/CMakeFiles/testbench.dir/rule
-.PHONY : testbench
-
-# clean rule for target.
-Tests/CMakeFiles/testbench.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/clean
-.PHONY : Tests/CMakeFiles/testbench.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

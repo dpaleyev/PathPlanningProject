@@ -197,19 +197,6 @@ Paleyev_Daniel_ASearch/fast:
 	$(MAKE) $(MAKESILENT) -f Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build.make Src/CMakeFiles/Paleyev_Daniel_ASearch.dir/build
 .PHONY : Paleyev_Daniel_ASearch/fast
 
-#=============================================================================
-# Target rules for targets named testbench
-
-# Build rule for target.
-testbench: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testbench
-.PHONY : testbench
-
-# fast build rule for target.
-testbench/fast:
-	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testbench.dir/build.make Tests/CMakeFiles/testbench.dir/build
-.PHONY : testbench/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -225,7 +212,6 @@ help:
 	@echo "... test"
 	@echo "... PPLIB"
 	@echo "... Paleyev_Daniel_ASearch"
-	@echo "... testbench"
 .PHONY : help
 
 
