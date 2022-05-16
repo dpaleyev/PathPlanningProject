@@ -28,6 +28,10 @@
         #define CNS_TAG_AS          "allowsqueeze"
         #define CNS_TAG_AD          "allowdiagonal"
         #define CNS_TAG_CC          "cutcorners"
+        #define CNS_TAG_PC          "prioratizeconflicts"
+        #define CNS_TAG_BP          "bypass"
+        #define CNS_TAG_CR          "corridorsymmetry"
+        #define CNS_TAG_TR          "targetsymmetry"
 
     #define CNS_TAG_OPT             "options"
         #define CNS_TAG_LOGLVL      "loglevel"
@@ -109,6 +113,12 @@
         #define CN_SP_BT_GMIN 0
         #define CN_SP_BT_GMAX 1
 
+//HighSearch Parameters
+
+#define CN_SP_PC          0      //"prioratizeconflicts"
+#define CN_SP_BP          1      //"bypass"
+#define CN_SP_CR          2      //"corridorsymmetry"
+#define CN_SP_TR          3      //"targetsymmetry"
 
 
     //Log Configuration

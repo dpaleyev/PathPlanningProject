@@ -11,6 +11,10 @@ public:
     bool    allowsqueeze;   //Option that allows to move throught "bottleneck"
     bool    allowdiagonal;  //Option that allows to make diagonal moves
     bool    cutcorners;     //Option that allows to make diagonal moves, when one adjacent cell is untraversable
+    bool    prioratizeconflicts;
+    bool    bypass;
+    bool    corridorsymmetry;
+    bool    targetsymmetry;
 
 };
 

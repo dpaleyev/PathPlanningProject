@@ -35,6 +35,7 @@
         <allowdiagonal>false</allowdiagonal>
         <cutcorners>false</cutcorners>
         <allowsqueeze>false</allowsqueeze>
+        <targetsymmetry>false</targetsymmetry>
     </algorithm>
     <options>
         <loglevel>1</loglevel>

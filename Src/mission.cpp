@@ -42,6 +42,10 @@ void Mission::createEnvironmentOptions()
     options.allowsqueeze = config.SearchParams[CN_SP_AS];
     options.allowdiagonal = config.SearchParams[CN_SP_AD];
     options.metrictype = config.SearchParams[CN_SP_MT];
+    options.prioratizeconflicts = config.HighSearchParams[CN_SP_PC];
+    options.bypass = config.HighSearchParams[CN_SP_BP];
+    options.corridorsymmetry = config.HighSearchParams[CN_SP_CR];
+    options.targetsymmetry = config.HighSearchParams[CN_SP_TR];
 
 }
 

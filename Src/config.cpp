@@ -10,11 +10,13 @@ Config::Config()
 {
     LogParams = nullptr;
     SearchParams = nullptr;
+    HighSearchParams = new double[4];
 }
 
 Config::~Config()
 {
     if (SearchParams) delete[] SearchParams;
+    if (HighSearchParams) delete[] HighSearchParams;
     if (LogParams) delete[] LogParams;
 }
 
@@ -223,6 +225,107 @@ bool Config::getConfig(const char *FileName)
                 }
             }
         }
+    }
+
+    element = algorithm->FirstChildElement(CNS_TAG_PC);
+    if (!element) {
+        std::cout << "Warning! No '" << CNS_TAG_PC << "' element found in XML file." << std::endl;
+        std::cout << "Value of '" << CNS_TAG_PC << "' was defined to default - true" << std::endl;
+        HighSearchParams[CN_SP_PC] = 1;
+    }
+    else {
+        std::string check;
+        stream << element->GetText();
+        stream >> check;
+        stream.clear();
+        stream.str("");
+
+        if (check != "1" && check != "true" && check != "0" && check != "false") {
+            std::cout << "Warning! Value of '" << CNS_TAG_PC << "' is not correctly specified." << std::endl;
+            std::cout << "Value of '" << CNS_TAG_PC << "' was defined to default - true " << std::endl;
+            HighSearchParams[CN_SP_PC] = 1;
+        }
+        else if (check == "1" || check == "true")
+            HighSearchParams[CN_SP_PC] = 1;
+        else
+            HighSearchParams[CN_SP_PC] = 0;
+    }
+
+    if (HighSearchParams[CN_SP_PC] == 0) {
+        HighSearchParams[CN_SP_BP] = 0;
+    }
+    else {
+        element = algorithm->FirstChildElement(CNS_TAG_BP);
+        if (!element) {
+            std::cout << "Warning! No '" << CNS_TAG_BP << "' element found in XML file." << std::endl;
+            std::cout << "Value of '" << CNS_TAG_BP << "' was defined to default - true" << std::endl;
+            HighSearchParams[CN_SP_BP] = 1;
+        }
+        else {
+            std::string check;
+            stream << element->GetText();
+            stream >> check;
+            stream.clear();
+            stream.str("");
+
+            if (check != "1" && check != "true" && check != "0" && check != "false") {
+                std::cout << "Warning! Value of '" << CNS_TAG_BP << "' is not correctly specified." << std::endl;
+                std::cout << "Value of '" << CNS_TAG_BP << "' was defined to default - true " << std::endl;
+                HighSearchParams[CN_SP_BP] = 1;
+            }
+            else if (check == "1" || check == "true")
+                HighSearchParams[CN_SP_BP] = 1;
+            else
+                HighSearchParams[CN_SP_BP] = 0;
+        }
+    }
+
+    element = algorithm->FirstChildElement(CNS_TAG_CR);
+    if (!element) {
+        std::cout << "Warning! No '" << CNS_TAG_CR << "' element found in XML file." << std::endl;
+        std::cout << "Value of '" << CNS_TAG_CR << "' was defined to default - true" << std::endl;
+        HighSearchParams[CN_SP_CR] = 1;
+    }
+    else {
+        std::string check;
+        stream << element->GetText();
+        stream >> check;
+        stream.clear();
+        stream.str("");
+
+        if (check != "1" && check != "true" && check != "0" && check != "false") {
+            std::cout << "Warning! Value of '" << CNS_TAG_CR << "' is not correctly specified." << std::endl;
+            std::cout << "Value of '" << CNS_TAG_CR << "' was defined to default - true " << std::endl;
+            HighSearchParams[CN_SP_CR] = 1;
+        }
+        else if (check == "1" || check == "true")
+            HighSearchParams[CN_SP_CR] = 1;
+        else
+            HighSearchParams[CN_SP_CR] = 0;
+    }
+
+    element = algorithm->FirstChildElement(CNS_TAG_TR);
+    if (!element) {
+        std::cout << "Warning! No '" << CNS_TAG_TR << "' element found in XML file." << std::endl;
+        std::cout << "Value of '" << CNS_TAG_TR << "' was defined to default - true" << std::endl;
+        HighSearchParams[CN_SP_TR] = 1;
+    }
+    else {
+        std::string check;
+        stream << element->GetText();
+        stream >> check;
+        stream.clear();
+        stream.str("");
+
+        if (check != "1" && check != "true" && check != "0" && check != "false") {
+            std::cout << "Warning! Value of '" << CNS_TAG_TR << "' is not correctly specified." << std::endl;
+            std::cout << "Value of '" << CNS_TAG_TR << "' was defined to default - true " << std::endl;
+            HighSearchParams[CN_SP_TR] = 1;
+        }
+        else if (check == "1" || check == "true")
+            HighSearchParams[CN_SP_TR] = 1;
+        else
+            HighSearchParams[CN_SP_TR] = 0;
     }
 
     options = root->FirstChildElement(CNS_TAG_OPT);

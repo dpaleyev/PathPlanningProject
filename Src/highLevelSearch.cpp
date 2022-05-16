@@ -22,15 +22,15 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             return hsr;
         }
 
-        if (true) { //TODO:Parse input options PC + BP
+        if (options.prioratizeconflicts) {
             if (!findCardinalConflict(P, conflict, Map, options)) {
-                if (findBypass(P, conflict, Logger, Map, options)) {
+                if (options.bypass && findBypass(P, conflict, Logger, Map, options)) {
                     continue;
                 }
             }
         }
 
-        if (Map.CellIsIntoCorridor(conflict[0].cell.first, conflict[0].cell.second)){ //TODO:Parse corridor reasoning
+        if (options.corridorsymmetry && Map.CellIsIntoCorridor(conflict[0].cell.first, conflict[0].cell.second)){
             for (int i_id = 0; i_id < 2; ++i_id) {
                 auto it = P.paths[conflict[i_id].id]->begin();
                 std::pair<int, int> input_node;
@@ -60,7 +60,7 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             continue;
         }
 
-        if (conflict[0].cell == conflict[1].cell) { //TODO: parse params
+        if (options.targetsymmetry && conflict[0].cell == conflict[1].cell) {
             for (int i = 0; i < 2; ++i) {
                 if (conflict[0].cell == Map.getGoal(conflict[i].id)) {
                     int time = 0;

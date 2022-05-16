@@ -12,6 +12,7 @@ class Config
 
     public:
         double*         SearchParams;
+        double*         HighSearchParams;
         std::string*    LogParams;
         unsigned int    N;
 
