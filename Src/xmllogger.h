@@ -1,39 +1,36 @@
 #ifndef XMLLOGGER_H
-#define	XMLLOGGER_H
-#include "tinyxml2.h"
+#define XMLLOGGER_H
 #include "ilogger.h"
+#include "tinyxml2.h"
 
-
-//That's the class that flushes the data to the output XML
-
+// That's the class that flushes the data to the output XML
 
 class XmlLogger : public ILogger {
 
 public:
-    XmlLogger(std::string loglevel):ILogger(loglevel){}
+  XmlLogger(std::string loglevel) : ILogger(loglevel) {}
 
-    virtual ~XmlLogger() {};
+  virtual ~XmlLogger(){};
 
-    bool getLog(const char *FileName, const std::string *LogParams);
+  bool getLog(const char *FileName, const std::string *LogParams);
 
-    void saveLog();
+  void saveLog();
 
-    //void writeToLogMap(const Map &Map, const std::list<Node> &path);
+  // void writeToLogMap(const Map &Map, const std::list<Node> &path);
 
-    //void writeToLogOpenClose(const typename &open, const typename &close);
+  // void writeToLogOpenClose(const typename &open, const typename &close);
 
-    void writeToLogPath(const std::vector<std::list<Node>> &path);
+  void writeToLogPath(const std::vector<std::list<Node>> &path);
 
-    void writeToLogHPpath(const std::vector<std::list<Node>> &hppath);
+  void writeToLogHPpath(const std::vector<std::list<Node>> &hppath);
 
-    void writeToLogNotFound();
+  void writeToLogNotFound();
 
-    void writeToLogSummary(float length, double time, double cellSize);
+  void writeToLogSummary(float length, double time, double cellSize);
 
 private:
-    std::string LogFileName;
-    tinyxml2::XMLDocument doc;
+  std::string LogFileName;
+  tinyxml2::XMLDocument doc;
 };
 
 #endif
-
