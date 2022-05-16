@@ -30,8 +30,40 @@ HighLevelResults HighLevelSearch::solve(ILogger *Logger, const Map &Map, const E
             }
         }
 
+        if (Map.CellIsIntoCorridor(conflict[0].cell.first, conflict[0].cell.second)){
+            for (int i_id = 0; i_id < 2; ++i_id) {
+                id
+                auto it1 = P.paths[conflict[0].id]->begin();
+                std::pair<int, int> input_node1;
+                int from_start = 0;
+
+                for (;it1 != P.paths[conflict[0].id]->end(); it1++) {
+                    if (std::make_pair(it1->i, it1->j) == conflict[0].cell) {
+                        break;
+                    }
+                    if (Map.CellIsIntoCorridor(it1->i, it1->j)) {
+                        if (from_start == 0) {
+                            input_node1 = {it1->i, it1->j};
+                        }
+                        from_start++;
+                    } else {
+                        from_start = 0;
+                    }
+                }
+                std::vector<Constraint> constr;
+                for (int i = 0; i <= conflict[0].time + from_start; ++i) {
+                    constr.push_back({id, i, input_node1});
+                }
+                TreeNode A(P, constr);
+                A.updatePath(Logger, Map, options, id);
+                OPEN.push_back(A);
+            }
+
+
+        }
+
         for (int i = 0; i < 2; ++i) {
-            TreeNode A(P, conflict[i]);
+            TreeNode A(P, {conflict[i]});
             A.updatePath(Logger, Map, options, conflict[i].id);
             OPEN.push_back(A);
         }
@@ -50,6 +82,7 @@ std::list<TreeNode>::iterator HighLevelSearch::findBestNode() {
 }
 
 bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constraint>& res, const Map &Map, const EnvironmentOptions &options) {
+    bool flagCardinal = false;
     for (int i = 0; i < (int)node.paths.size(); i++) {
         for (int j = i + 1; j < (int)node.paths.size(); j++) {
             auto it1 = node.paths[i]->begin();
@@ -64,7 +97,10 @@ bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constrain
                         if (k < node.paths[j]->size()) {
                             res.push_back({j, (int)k, {it1->i, it1->j}});
                         }
-                        return true;
+                        flagCardinal = true;
+                        if (Map.CellIsIntoCorridor(res[0].cell.first, res[0].cell.second)) {
+                            return true;
+                        }
                     }
                 }
                 if (k != 0) {
@@ -81,7 +117,10 @@ bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constrain
                             res = {};
                             res.push_back({i, (int)k, {it1->i, it1->j}});
                             res.push_back({j, (int)k, {it2->i, it2->j}});
-                            return true;
+                            flagCardinal = true;
+                            if (Map.CellIsIntoCorridor(res[0].cell.first, res[0].cell.second)) {
+                                return true;
+                            }
                         }
                     }
                 }
@@ -94,7 +133,7 @@ bool HighLevelSearch::findCardinalConflict(TreeNode &node, std::vector<Constrain
             }
         }
     }
-    return false;
+    return flagCardinal;
 }
 
 bool HighLevelSearch::isCardinal(int id, int cost, int depth, const Map &Map, const EnvironmentOptions &options) {

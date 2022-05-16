@@ -467,3 +467,17 @@ std::pair<int, int> Map::getStart(int agent_id) const {
 std::pair<int, int> Map::getGoal(int agent_id) const {
     return {goal_i[agent_id], goal_j[agent_id]};
 }
+
+bool Map::CellIsIntoCorridor(int i, int j) const {
+    if (CellIsObstacle(i, j)) {
+        return false;
+    }
+    std::vector<int> d_i = {1, 0, -1, 0}, d_j = {0, 1, 0, -1};
+    int count = 0;
+    for (int it = 0; it < 4; ++it) {
+        if (CellIsTraversable(i + d_i[it], j + d_j[it])) {
+            count++;
+        }
+    }
+    return count == 2;
+}

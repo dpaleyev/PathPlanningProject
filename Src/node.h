@@ -38,10 +38,13 @@ struct cord_hash {
 struct Comparator {
     bool operator() (const Node* a, const Node* b) const {
         if (a->F == b->F) {
-            if (a->i == b->i) {
-                return a->j < b->j;
+            if (a->g == b->g) {
+                if (a->i == b->i) {
+                    return a->j < b->j;
+                }
+                return a->i < b->i;
             }
-            return a->i < b->i;
+            return a->g < b->g;
         }
         return a->F < b->F;
     }

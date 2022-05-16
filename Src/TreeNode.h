@@ -30,8 +30,10 @@ public:
 
     TreeNode() = default;
 
-    TreeNode(TreeNode& node, Constraint& constraint) : totalCost(node.totalCost), constraints(node.constraints), paths(node.paths), costs(node.costs) {
-        constraints[constraint.id][constraint.time].insert(constraint.cell);
+    TreeNode(TreeNode& node, std::vector<Constraint> constraint) : totalCost(node.totalCost), constraints(node.constraints), paths(node.paths), costs(node.costs) {
+        for (auto& c : constraint) {
+            constraints[c.id][c.time].insert(c.cell);
+        }
     }
 
     void findPaths(ILogger *Logger, const Map &Map, const EnvironmentOptions &options);
