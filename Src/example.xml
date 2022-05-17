@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <map>
-        <width>4</width>
-        <height>3</height>
-        <agentsnumber>2</agentsnumber>
+        <width>15</width>
+        <height>15</height>
+        <agentsnumber>5</agentsnumber>
         <cellsize>24</cellsize>
         <startx>
             <agent>0</agent>
-            <agent>3</agent>
+            <agent>14</agent>
+            <agent>0</agent>
+            <agent>14</agent>
+            <agent>1</agent>
         </startx>
         <starty>
-            <agent>2</agent>
             <agent>0</agent>
+            <agent>0</agent>
+            <agent>14</agent>
+            <agent>14</agent>
+            <agent>9</agent>
         </starty>
         <finishx>
+            <agent>12</agent>
             <agent>3</agent>
-            <agent>0</agent>
+            <agent>13</agent>
+            <agent>6</agent>
+            <agent>13</agent>
         </finishx>
         <finishy>
+            <agent>9</agent>
+            <agent>9</agent>
             <agent>0</agent>
-            <agent>0</agent>
+            <agent>3</agent>
+            <agent>3</agent>
         </finishy>
         <grid>
-            <row>0 1 1 0</row>
-            <row>0 0 0 0</row>
-            <row>0 1 1 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
+            <row>0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 </row>
         </grid>
     </map>
     <algorithm>
@@ -35,7 +59,10 @@
         <allowdiagonal>false</allowdiagonal>
         <cutcorners>false</cutcorners>
         <allowsqueeze>false</allowsqueeze>
-        <targetsymmetry>false</targetsymmetry>
+        <prioratizeconflicts>true</prioratizeconflicts>
+        <bypass>true</bypass>
+        <corridorsymmetry>true</corridorsymmetry>
+        <targetsymmetry>true</targetsymmetry>
     </algorithm>
     <options>
         <loglevel>1</loglevel>
