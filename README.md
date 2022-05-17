@@ -132,6 +132,15 @@ PathPlanning.exe ../../Examples/example.xml
     + `logfilename`
 
 
+## Визуализация
+Визуализация происходит с помощью Python скрипта `visualizer.py`
+
+После запуска передается путь до лог файла и автоматические начинается визуализация
+
+###Пример:
+
+![Alt Text](/Images/visualizer_example.gif)
+
 ## Контакты
 **Яковлев Константин Сергеевич**
 - kyakovlev@hse.ru
