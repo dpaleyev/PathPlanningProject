@@ -137,7 +137,7 @@ PathPlanning.exe ../../Examples/example.xml
 
 После запуска передается путь до лог файла и автоматические начинается визуализация
 
-###Пример:
+### Пример:
 
 ![Alt Text](/Images/visualizer_example.gif)
 
