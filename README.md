@@ -34,67 +34,7 @@ git@github.com:dpaleyev/PathPlanningProject.git
 
 Сборку проекта возможно осуществить используя CMake.
 
-При использовании CMake сборка и запуск может производиться как из командной строки, так и при помощи различных IDE (например JetBrains CLion). Ниже приведены скрипты сборки и запуска с использованием командной строки.
-
-### Linux и Mac
-Release сборка:
-```bash
-cd PathPlanningProject
-cd Build
-cd Release
-cmake ../../ -DCMAKE_BUILD_TYPE="Release"
-make
-make install
-```
-
-Debug сборка:
-```bash
-cd PathPlanningProject
-cd Build
-cd Debug
-cmake ../../ -DCMAKE_BUILD_TYPE="Debug"
-make
-make install
-```
-
-Запуск:
-```bash
-cd ../../Bin/{Debug|Release}/
-./PathPlanning ../../Examples/example.xml
-```
-Результат запуска:
-
-![cmake_run](./Images/cmake1.png)
-
-### Windows
-Release сборка:
-```cmd
-cd PathPlanningProject
-cd Build
-cd Release
-set PATH
-cmake ../../ -DCMAKE_BUILD_TYPE="Release" -G "MinGW Makefiles"
-mingw32-make
-mingw32-make install
-```
-
-Debug сборка:
-```cmd
-cd PathPlanningProject
-cd Build
-cd Debug
-set PATH
-cmake ../../ -DCMAKE_BUILD_TYPE="Debug" -G "MinGW Makefiles"
-mingw32-make
-mingw32-make install
-```
-
-Запуск:
-```cmd
-cd ../../Bin/{Debug|Release}/
-PathPlanning.exe ../../Examples/example.xml
-```
-
+При использовании CMake сборка и запуск может производиться как из командной строки, так и при помощи различных IDE (например JetBrains CLion). 
 ## Формат данных
 Примеры входных и выходных файлов можно посмотреть в папке `Examples`
 
